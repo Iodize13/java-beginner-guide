@@ -1,0 +1,7 @@
+* [[./index.org][*Java*]]
+* Java ก่อนกลางภาค
+** [[./variable-and-datatypes.org][Variable and Data Types 💀💀]]
+** [[./operations-packages-and-programming-styles.org][Operations, Packages and Programming Styles]]
+** [[./method.org][Methods 💀💀]]
+** [[./control-statements.org][Control Statements 💀]]
+** [[./arrays.org][Arrays 💀💀💀💀]]

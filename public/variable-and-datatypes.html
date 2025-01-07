@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+
+<link rel="stylesheet" href="readtheorg.css" />
+<link rel="stylesheet" href="rethink_inline.css" />
+<link rel="stylesheet" href="src.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/search.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgcaa6fc2"><b>Java</b></a></li>
+<li><a href="#org6318751">📚 สรุปเนื้อหาเรื่อง Variables and Data Types (พร้อมตัวอย่างโค้ด) 💀💀</a>
+<ul>
+<li><a href="#org60da545">📌 การเขียนโปรแกรม Java เบื้องต้น</a></li>
+<li><a href="#org3c91cd3">📌 ตัวแปร (Variables)</a></li>
+<li><a href="#org169d4c9">📌 ชนิดข้อมูลพื้นฐาน (Primitive Data Types)</a></li>
+<li><a href="#org2d9a969">📌 นิพจน์และการกำหนดค่าให้ตัวแปร (Expressions &amp; Variable Assignment)</a></li>
+<li><a href="#orgb3699de">📌 เมธอด (Subroutines)</a></li>
+<li><a href="#orgca82d7b">📌 สายอักขระ (Strings) 💀💀</a></li>
+<li><a href="#org3ffc0cd">📌 การใช้ Enum (Enumerations) 💀💀💀</a></li>
+<li><a href="#org0305c8b">📌 ตัวอย่างการใช้ Enum 💀💀💀</a></li>
+<li><a href="#org2db2035">📌 กฎการตั้งชื่อใน Java (Syntax Rules)</a></li>
+<li><a href="#orgd6648da">📌 โครงสร้างโปรแกรม Java</a></li>
+<li><a href="#orgcea56eb">📌 ชนิดข้อมูล Math และเมธอดที่สำคัญ 💀</a></li>
+<li><a href="#org6f7db45">📌 การวัดเวลาในโปรแกรม 💀</a></li>
+<li><a href="#org8c91a19">📌 การรับค่า Program Arguments</a></li>
+<li><a href="#org2c65a28">📌 ตัวอย่างโปรแกรม Java</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcaa6fc2" class="outline-2">
+<h2 id="orgcaa6fc2"><a href="./index.html"><b>Java</b></a></h2>
+</div>
+<div id="outline-container-org6318751" class="outline-2">
+<h2 id="org6318751">📚 สรุปเนื้อหาเรื่อง Variables and Data Types (พร้อมตัวอย่างโค้ด) 💀💀</h2>
+<div class="outline-text-2" id="text-org6318751">
+<p>
+<b>เนื้อหาต่อจากนี้ถูกสร้างขึ้นโดย AI โดยใช้ข้อมูลจาก Presentation Slides เรื่อง Variable and Data types</b>
+</p>
+<hr />
+</div>
+
+<div id="outline-container-org60da545" class="outline-3">
+<h3 id="org60da545">📌 การเขียนโปรแกรม Java เบื้องต้น</h3>
+<div class="outline-text-3" id="text-org60da545">
+<ul class="org-ul">
+<li><b>Class (คลาส)</b>: โครงสร้างพื้นฐานของโปรแกรม Java
+ทุกโปรแกรมจะต้องเริ่มต้นด้วยคลาส</li>
+
+<li><p>
+<b>Main Method (เมธอดหลัก)</b>: จุดเริ่มต้นของการทำงานในโปรแกรม Java
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-keyword">public</span> <span class="org-keyword">class</span> <span class="org-type">HelloWorld</span> {
+    <span class="org-keyword">public</span> <span class="org-keyword">static</span> <span class="org-type">void</span> <span class="org-function-name">main</span>(<span class="org-type">String</span>[] <span class="org-variable-name">args</span>) {
+        System.out.println(<span class="org-string">"Hello World!"</span>);
+    }
+}
+</pre>
+</div></li>
+</ul>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-org3c91cd3" class="outline-3">
+<h3 id="org3c91cd3">📌 ตัวแปร (Variables)</h3>
+<div class="outline-text-3" id="text-org3c91cd3">
+<ul class="org-ul">
+<li><b>ตัวแปร</b> คือ กล่องที่ใช้เก็บข้อมูลในหน่วยความจำ</li>
+
+<li><p>
+การประกาศตัวแปรใน Java ต้องระบุ <b>ชนิดข้อมูล (Type)</b> ก่อนเสมอ เช่น <code>int</code>,
+<code>double</code>, <code>String</code>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-type">int</span> <span class="org-variable-name">age</span> = 25;
+<span class="org-type">double</span> <span class="org-variable-name">salary</span> = 50000.0;
+</pre>
+</div></li>
+</ul>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-org169d4c9" class="outline-3">
+<h3 id="org169d4c9">📌 ชนิดข้อมูลพื้นฐาน (Primitive Data Types)</h3>
+<div class="outline-text-3" id="text-org169d4c9">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left"><b>ชนิดข้อมูล</b></th>
+<th scope="col" class="org-right"><b>ขนาด (บิต)</b></th>
+<th scope="col" class="org-left"><b>คำอธิบาย</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>byte</code></td>
+<td class="org-right">8</td>
+<td class="org-left">จำนวนเต็มขนาดเล็ก</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>short</code></td>
+<td class="org-right">16</td>
+<td class="org-left">จำนวนเต็มขนาดกลาง</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>int</code></td>
+<td class="org-right">32</td>
+<td class="org-left">จำนวนเต็มทั่วไป</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>long</code></td>
+<td class="org-right">64</td>
+<td class="org-left">จำนวนเต็มขนาดใหญ่</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>float</code></td>
+<td class="org-right">32</td>
+<td class="org-left">จำนวนทศนิยม</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>double</code></td>
+<td class="org-right">64</td>
+<td class="org-left">จำนวนทศนิยมที่มีความแม่นยำสูง</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>char</code></td>
+<td class="org-right">16</td>
+<td class="org-left">ตัวอักษร Unicode</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>boolean</code></td>
+<td class="org-right">1</td>
+<td class="org-left">ค่าจริงหรือเท็จ (<code>true/false</code>)</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-org2d9a969" class="outline-3">
+<h3 id="org2d9a969">📌 นิพจน์และการกำหนดค่าให้ตัวแปร (Expressions &amp; Variable Assignment)</h3>
+<div class="outline-text-3" id="text-org2d9a969">
+<ul class="org-ul">
+<li><p>
+การกำหนดค่าให้ตัวแปรใช้เครื่องหมาย <code>=</code>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-type">int</span> <span class="org-variable-name">x</span> = 10;
+<span class="org-type">double</span> <span class="org-variable-name">interest</span> = principal * rate;
+</pre>
+</div></li>
+</ul>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-orgb3699de" class="outline-3">
+<h3 id="orgb3699de">📌 เมธอด (Subroutines)</h3>
+<div class="outline-text-3" id="text-orgb3699de">
+<ul class="org-ul">
+<li><p>
+<b>Subroutine</b> คือ ชุดคำสั่งที่รวบรวมไว้ภายใต้ชื่อเดียว และสามารถเรียกใช้ซ้ำได้
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-keyword">public</span> <span class="org-keyword">static</span> <span class="org-type">int</span> <span class="org-function-name">add</span>(<span class="org-type">int</span> <span class="org-variable-name">a</span>, <span class="org-type">int</span> <span class="org-variable-name">b</span>) {
+    <span class="org-keyword">return</span> a + b;
+}
+</pre>
+</div></li>
+</ul>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-orgca82d7b" class="outline-3">
+<h3 id="orgca82d7b">📌 สายอักขระ (Strings) 💀💀</h3>
+<div class="outline-text-3" id="text-orgca82d7b">
+<ul class="org-ul">
+<li><b>String</b> คือ ลำดับของตัวอักษร ซึ่งจัดการโดยคลาส <code>String</code></li>
+<li><b>เมธอดที่ใช้บ่อย</b>:
+<ul class="org-ul">
+<li><code>length()</code>: คืนค่าความยาวของสายอักขระ</li>
+<li><code>charAt(index)</code>: คืนค่าตัวอักษรที่ตำแหน่งที่ระบุ</li>
+<li><code>toUpperCase()</code>, <code>toLowerCase()</code>: แปลงสายอักขระเป็นตัวพิมพ์ใหญ่หรือตัวพิมพ์เล็ก</li>
+</ul></li>
+</ul>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-org3ffc0cd" class="outline-3">
+<h3 id="org3ffc0cd">📌 การใช้ Enum (Enumerations) 💀💀💀</h3>
+<div class="outline-text-3" id="text-org3ffc0cd">
+<ul class="org-ul">
+<li><p>
+<b>Enum</b> คือ ชนิดข้อมูลที่มีค่าคงที่ที่กำหนดไว้ล่วงหน้า
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-keyword">enum</span> <span class="org-type">Season</span> { <span class="org-variable-name">SPRING</span>, <span class="org-variable-name">SUMMER</span>, <span class="org-variable-name">FALL</span>, <span class="org-variable-name">WINTER</span> }
+<span class="org-type">Season</span> <span class="org-variable-name">vacation</span> = <span class="org-constant">Season</span>.SUMMER;
+</pre>
+</div></li>
+
+<li><p>
+<b>เมธอด <code>ordinal()</code></b>: ใช้คืนค่าลำดับของค่าใน Enum
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java">System.out.println(<span class="org-constant">Season</span>.SUMMER.ordinal()); <span class="org-comment-delimiter">// </span><span class="org-comment">&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;: 1</span>
+</pre>
+</div></li>
+</ul>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-org0305c8b" class="outline-3">
+<h3 id="org0305c8b">📌 ตัวอย่างการใช้ Enum 💀💀💀</h3>
+<div class="outline-text-3" id="text-org0305c8b">
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-keyword">public</span> <span class="org-keyword">class</span> <span class="org-type">EnumDemo</span> {
+    <span class="org-keyword">enum</span> <span class="org-type">Day</span> { <span class="org-variable-name">SUNDAY</span>, <span class="org-variable-name">MONDAY</span>, <span class="org-variable-name">TUESDAY</span>, <span class="org-variable-name">WEDNESDAY</span>, <span class="org-variable-name">THURSDAY</span>, <span class="org-variable-name">FRIDAY</span>, <span class="org-variable-name">SATURDAY</span> }
+    <span class="org-keyword">public</span> <span class="org-keyword">static</span> <span class="org-type">void</span> <span class="org-function-name">main</span>(<span class="org-type">String</span>[] <span class="org-variable-name">args</span>) {
+        <span class="org-type">Day</span> <span class="org-variable-name">tgif</span> = <span class="org-constant">Day</span>.FRIDAY;
+        System.out.println(tgif + <span class="org-string">" is the "</span> + tgif.ordinal() + <span class="org-string">"-th day of the week."</span>);
+    }
+}
+</pre>
+</div>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-org2db2035" class="outline-3">
+<h3 id="org2db2035">📌 กฎการตั้งชื่อใน Java (Syntax Rules)</h3>
+<div class="outline-text-3" id="text-org2db2035">
+<ul class="org-ul">
+<li><b>Identifiers (ตัวระบุ)</b> คือ ชื่อที่ใช้เรียกตัวแปร คลาส หรือเมธอด</li>
+<li>ต้องเริ่มต้นด้วยตัวอักษรหรือ <code>_</code> และไม่มีช่องว่างระหว่างชื่อ</li>
+<li>ตัวพิมพ์ใหญ่และตัวพิมพ์เล็กถือว่าแตกต่างกัน เช่น <code>HelloWorld</code> ไม่เหมือนกับ
+<code>helloworld</code></li>
+<li>ห้ามใช้ <b>Reserved Words (คำสงวน)</b> เช่น <code>class</code>, <code>public</code>, <code>static</code>, <code>if</code>,
+<code>else</code></li>
+</ul>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-orgd6648da" class="outline-3">
+<h3 id="orgd6648da">📌 โครงสร้างโปรแกรม Java</h3>
+<div class="outline-text-3" id="text-orgd6648da">
+<ul class="org-ul">
+<li><p>
+โครงสร้างพื้นฐานของโปรแกรม Java:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-keyword">public</span> <span class="org-keyword">class</span> <span class="org-type">ProgramName</span> {
+    <span class="org-keyword">public</span> <span class="org-keyword">static</span> <span class="org-type">void</span> <span class="org-function-name">main</span>(<span class="org-type">String</span>[] <span class="org-variable-name">args</span>) {
+        <span class="org-comment-delimiter">// </span><span class="org-comment">&#3588;&#3635;&#3626;&#3633;&#3656;&#3591;&#3607;&#3637;&#3656;&#3605;&#3657;&#3629;&#3591;&#3585;&#3634;&#3619;&#3651;&#3627;&#3657;&#3650;&#3611;&#3619;&#3649;&#3585;&#3619;&#3617;&#3607;&#3635;&#3591;&#3634;&#3609;</span>
+    }
+}
+</pre>
+</div></li>
+
+<li>ชื่อคลาสต้องตรงกับชื่อไฟล์ เช่น คลาส <code>HelloWorld</code> ต้องบันทึกในไฟล์
+<code>HelloWorld.java</code></li>
+</ul>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-orgcea56eb" class="outline-3">
+<h3 id="orgcea56eb">📌 ชนิดข้อมูล Math และเมธอดที่สำคัญ 💀</h3>
+<div class="outline-text-3" id="text-orgcea56eb">
+<ul class="org-ul">
+<li>คลาส <b>Math</b> มีเมธอดที่ใช้คำนวณต่างๆ เช่น
+<ul class="org-ul">
+<li><code>Math.abs(x)</code>: ค่าสัมบูรณ์</li>
+<li><code>Math.pow(x, y)</code>: ยกกำลัง</li>
+<li><code>Math.random()</code>: สุ่มตัวเลขระหว่าง 0 ถึง 1</li>
+</ul></li>
+</ul>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-org6f7db45" class="outline-3">
+<h3 id="org6f7db45">📌 การวัดเวลาในโปรแกรม 💀</h3>
+<div class="outline-text-3" id="text-org6f7db45">
+<ul class="org-ul">
+<li>ใช้เมธอด <code>System.currentTimeMillis()</code> เพื่อวัดเวลาปัจจุบันในหน่วยมิลลิวินาที</li>
+
+<li><p>
+สามารถนำไปใช้วัดเวลาการทำงานของโปรแกรมได้
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-type">long</span> <span class="org-variable-name">startTime</span> = System.currentTimeMillis();
+<span class="org-comment-delimiter">// </span><span class="org-comment">&#3650;&#3588;&#3657;&#3604;&#3607;&#3637;&#3656;&#3605;&#3657;&#3629;&#3591;&#3585;&#3634;&#3619;&#3623;&#3633;&#3604;&#3648;&#3623;&#3621;&#3634;</span>
+<span class="org-type">long</span> <span class="org-variable-name">endTime</span> = System.currentTimeMillis();
+System.out.println(<span class="org-string">"Run time: "</span> + (endTime - startTime) + <span class="org-string">" ms"</span>);
+</pre>
+</div></li>
+</ul>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-org8c91a19" class="outline-3">
+<h3 id="org8c91a19">📌 การรับค่า Program Arguments</h3>
+<div class="outline-text-3" id="text-org8c91a19">
+<ul class="org-ul">
+<li><p>
+โปรแกรม Java สามารถรับค่า argument จากคอมมานด์ไลน์ได้
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-keyword">public</span> <span class="org-keyword">static</span> <span class="org-type">void</span> <span class="org-function-name">main</span>(<span class="org-type">String</span>[] <span class="org-variable-name">args</span>) {
+    System.out.println(args[0]); <span class="org-comment-delimiter">// </span><span class="org-comment">&#3649;&#3626;&#3604;&#3591;&#3588;&#3656;&#3634; argument &#3605;&#3633;&#3623;&#3649;&#3619;&#3585;</span>
+}
+</pre>
+</div></li>
+
+<li>ใช้ <code>Integer.parseInt()</code> หรือ <code>Double.parseDouble()</code> เพื่อแปลงค่าจาก String
+เป็นตัวเลข</li>
+</ul>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-org2c65a28" class="outline-3">
+<h3 id="org2c65a28">📌 ตัวอย่างโปรแกรม Java</h3>
+<div class="outline-text-3" id="text-org2c65a28">
+<ul class="org-ul">
+<li><b>โปรแกรม HelloWorld</b></li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-keyword">public</span> <span class="org-keyword">class</span> <span class="org-type">HelloWorld</span> {
+    <span class="org-keyword">public</span> <span class="org-keyword">static</span> <span class="org-type">void</span> <span class="org-function-name">main</span>(<span class="org-type">String</span>[] <span class="org-variable-name">args</span>) {
+        System.out.println(<span class="org-string">"Hello World!"</span>);
+    }
+}
+</pre>
+</div>
+
+<ul class="org-ul">
+<li><b>โปรแกรมคำนวณดอกเบี้ย (Interest.java)</b></li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-keyword">public</span> <span class="org-keyword">class</span> <span class="org-type">Interest</span> {
+    <span class="org-keyword">public</span> <span class="org-keyword">static</span> <span class="org-type">void</span> <span class="org-function-name">main</span>(<span class="org-type">String</span>[] <span class="org-variable-name">args</span>) {
+        <span class="org-type">double</span> <span class="org-variable-name">principal</span> = 17000;
+        <span class="org-type">double</span> <span class="org-variable-name">rate</span> = 0.07;
+        <span class="org-type">double</span> <span class="org-variable-name">interest</span> = principal * rate;
+        principal = principal + interest;
+
+        System.out.println(<span class="org-string">"The interest earned is $"</span> + interest);
+        System.out.println(<span class="org-string">"The value after one year is $"</span> + principal);
+    }
+}
+</pre>
+</div>
+
+<hr />
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 29.4 (<a href="https://orgmode.org">Org</a> mode 9.6.15)</p>
+</div>
+</body>
+</html>

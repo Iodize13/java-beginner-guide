@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+
+<link rel="stylesheet" href="readtheorg.css" />
+<link rel="stylesheet" href="rethink_inline.css" />
+<link rel="stylesheet" href="src.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/search.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgbe1ebcd"><b>Java</b></a></li>
+<li><a href="#orgef18611">📚 สรุปเนื้อหาเรื่อง Operations, Packages, and Programming Styles (พร้อมตัวอย่างโค้ด)</a>
+<ul>
+<li><a href="#org5dc2089">📌 การดำเนินการทางคณิตศาสตร์ใน Java (Arithmetic Operations)</a></li>
+<li><a href="#org86c5902">📌 ตัวดำเนินการแบบย่อ (Shortcut Operators)</a></li>
+<li><a href="#orgd54da7e">📌 การเพิ่มและลดค่า (Increment &amp; Decrement Operators)</a></li>
+<li><a href="#org4d34048">📌 ตัวดำเนินการเปรียบเทียบ (Relational Operators</a></li>
+<li><a href="#orgbb81a99">📌 ตัวดำเนินการแบบเงื่อนไข (Conditional Operator) 💀</a></li>
+<li><a href="#org71c8e0a">📌 การแปลงชนิดข้อมูล (Type Casting) 💀</a></li>
+<li><a href="#org0b44f8c">📌 การใช้แพ็กเกจใน Java (Java Packages) 💀</a></li>
+<li><a href="#org2626cc6">📌 การจัดการเอกสารโค้ดด้วย Javadoc 💀</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbe1ebcd" class="outline-2">
+<h2 id="orgbe1ebcd"><a href="./index.html"><b>Java</b></a></h2>
+</div>
+<div id="outline-container-orgef18611" class="outline-2">
+<h2 id="orgef18611">📚 สรุปเนื้อหาเรื่อง Operations, Packages, and Programming Styles (พร้อมตัวอย่างโค้ด)</h2>
+<div class="outline-text-2" id="text-orgef18611">
+<p>
+<b>เนื้อหาต่อจากนี้ถูกสร้างขึ้นโดย AI โดยใช้ข้อมูลจาก Presentation Slides เรื่อง Operations, Packages, and Programming Styles</b>
+</p>
+
+<hr />
+</div>
+
+<div id="outline-container-org5dc2089" class="outline-3">
+<h3 id="org5dc2089">📌 การดำเนินการทางคณิตศาสตร์ใน Java (Arithmetic Operations)</h3>
+<div class="outline-text-3" id="text-org5dc2089">
+<ul class="org-ul">
+<li>✅ <b>ตัวอย่างการใช้งานตัวดำเนินการพื้นฐาน</b></li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-type">int</span> <span class="org-variable-name">a</span> = 10;
+<span class="org-type">int</span> <span class="org-variable-name">b</span> = 3;
+
+System.out.println(a + b);   <span class="org-comment-delimiter">// </span><span class="org-comment">&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;: 13</span>
+System.out.println(a - b);   <span class="org-comment-delimiter">// </span><span class="org-comment">&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;: 7</span>
+System.out.println(a * b);   <span class="org-comment-delimiter">// </span><span class="org-comment">&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;: 30</span>
+System.out.println(a / b);   <span class="org-comment-delimiter">// </span><span class="org-comment">&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;: 3</span>
+System.out.println(a % b);   <span class="org-comment-delimiter">// </span><span class="org-comment">&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;: 1</span>
+</pre>
+</div>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-org86c5902" class="outline-3">
+<h3 id="org86c5902">📌 ตัวดำเนินการแบบย่อ (Shortcut Operators)</h3>
+<div class="outline-text-3" id="text-org86c5902">
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-type">int</span> <span class="org-variable-name">num</span> = 5;
+
+num += 3;  <span class="org-comment-delimiter">// </span><span class="org-comment">num = num + 3;</span>
+System.out.println(num);  <span class="org-comment-delimiter">// </span><span class="org-comment">&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;: 8</span>
+
+num *= 2;  <span class="org-comment-delimiter">// </span><span class="org-comment">num = num * 2;</span>
+System.out.println(num);  <span class="org-comment-delimiter">// </span><span class="org-comment">&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;: 16</span>
+</pre>
+</div>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-orgd54da7e" class="outline-3">
+<h3 id="orgd54da7e">📌 การเพิ่มและลดค่า (Increment &amp; Decrement Operators)</h3>
+<div class="outline-text-3" id="text-orgd54da7e">
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-type">int</span> <span class="org-variable-name">x</span> = 1;
+
+<span class="org-comment-delimiter">// </span><span class="org-comment">Post-Increment (x++ &#3651;&#3594;&#3657;&#3588;&#3656;&#3634;&#3648;&#3604;&#3636;&#3617;&#3585;&#3656;&#3629;&#3609;&#3588;&#3656;&#3629;&#3618;&#3648;&#3614;&#3636;&#3656;&#3617;)</span>
+System.out.println(x++);  <span class="org-comment-delimiter">// </span><span class="org-comment">&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;: 1</span>
+System.out.println(x);    <span class="org-comment-delimiter">// </span><span class="org-comment">&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;: 2</span>
+
+<span class="org-comment-delimiter">// </span><span class="org-comment">Pre-Increment (++x &#3648;&#3614;&#3636;&#3656;&#3617;&#3588;&#3656;&#3634;&#3585;&#3656;&#3629;&#3609;&#3649;&#3621;&#3657;&#3623;&#3588;&#3656;&#3629;&#3618;&#3651;&#3594;&#3657;)</span>
+System.out.println(++x);  <span class="org-comment-delimiter">// </span><span class="org-comment">&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;: 3</span>
+</pre>
+</div>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-org4d34048" class="outline-3">
+<h3 id="org4d34048">📌 ตัวดำเนินการเปรียบเทียบ (Relational Operators</h3>
+<div class="outline-text-3" id="text-org4d34048">
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-type">int</span> <span class="org-variable-name">a</span> = 10;
+<span class="org-type">int</span> <span class="org-variable-name">b</span> = 5;
+
+System.out.println(a == b);   <span class="org-comment-delimiter">// </span><span class="org-comment">&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;: false</span>
+System.out.println(a != b);   <span class="org-comment-delimiter">// </span><span class="org-comment">&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;: true</span>
+System.out.println(a &gt; b);    <span class="org-comment-delimiter">// </span><span class="org-comment">&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;: true</span>
+System.out.println(a &lt;= b);   <span class="org-comment-delimiter">// </span><span class="org-comment">&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;: false</span>
+</pre>
+</div>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-orgbb81a99" class="outline-3">
+<h3 id="orgbb81a99">📌 ตัวดำเนินการแบบเงื่อนไข (Conditional Operator) 💀</h3>
+<div class="outline-text-3" id="text-orgbb81a99">
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-type">int</span> <span class="org-variable-name">n</span> = 3;
+<span class="org-type">int</span> <span class="org-variable-name">next</span> = (n % 2 == 0) ? (n / 2) : (3 * n + 1);
+System.out.println(next);  <span class="org-comment-delimiter">// </span><span class="org-comment">&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;: 10</span>
+</pre>
+</div>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-org71c8e0a" class="outline-3">
+<h3 id="org71c8e0a">📌 การแปลงชนิดข้อมูล (Type Casting) 💀</h3>
+<div class="outline-text-3" id="text-org71c8e0a">
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-type">int</span> <span class="org-variable-name">a</span> = 10;
+<span class="org-type">double</span> <span class="org-variable-name">b</span> = a;  <span class="org-comment-delimiter">// </span><span class="org-comment">&#3649;&#3611;&#3621;&#3591;&#3592;&#3634;&#3585; int &#3648;&#3611;&#3655;&#3609; double &#3629;&#3633;&#3605;&#3650;&#3609;&#3617;&#3633;&#3605;&#3636;</span>
+
+<span class="org-type">double</span> <span class="org-variable-name">c</span> = 9.99;
+<span class="org-type">int</span> <span class="org-variable-name">d</span> = (<span class="org-type">int</span>) c;  <span class="org-comment-delimiter">// </span><span class="org-comment">&#3649;&#3611;&#3621;&#3591;&#3592;&#3634;&#3585; double &#3648;&#3611;&#3655;&#3609; int &#3650;&#3604;&#3618;&#3651;&#3594;&#3657;&#3585;&#3634;&#3619; cast</span>
+System.out.println(d);  <span class="org-comment-delimiter">// </span><span class="org-comment">&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;: 9</span>
+</pre>
+</div>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-org0b44f8c" class="outline-3">
+<h3 id="org0b44f8c">📌 การใช้แพ็กเกจใน Java (Java Packages) 💀</h3>
+<div class="outline-text-3" id="text-org0b44f8c">
+<ul class="org-ul">
+<li>✅ <b>ตัวอย่างการนำเข้าแพ็กเกจ</b></li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-keyword">import</span> <span class="org-constant">java</span>.<span class="org-constant">util</span>.*; <span class="org-comment-delimiter">//</span><span class="org-comment">&#3649;&#3609;&#3632;&#3609;&#3635;&#3651;&#3627;&#3657;&#3651;&#3594;&#3657; * &#3648;&#3614;&#3619;&#3634;&#3632;&#3619;&#3623;&#3617;&#3607;&#3640;&#3585; packages &#3651;&#3627;&#3657;&#3648;&#3621;&#3618;</span>
+
+<span class="org-keyword">public</span> <span class="org-keyword">class</span> <span class="org-type">InputExample</span> {
+    <span class="org-keyword">public</span> <span class="org-keyword">static</span> <span class="org-type">void</span> <span class="org-function-name">main</span>(<span class="org-type">String</span>[] <span class="org-variable-name">args</span>) {
+        <span class="org-type">Scanner</span> <span class="org-variable-name">input</span> = <span class="org-keyword">new</span> <span class="org-type">Scanner</span>(System.in);
+        System.out.print(<span class="org-string">"Enter your name: "</span>);
+        <span class="org-type">String</span> <span class="org-variable-name">name</span> = input.nextLine();
+        System.out.println(<span class="org-string">"Hello, "</span> + name);
+        input.close();
+    }
+}
+</pre>
+</div>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-org2626cc6" class="outline-3">
+<h3 id="org2626cc6">📌 การจัดการเอกสารโค้ดด้วย Javadoc 💀</h3>
+<div class="outline-text-3" id="text-org2626cc6">
+<ul class="org-ul">
+<li>✅ <b>ตัวอย่าง Javadoc Comment</b></li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-doc">/**</span>
+<span class="org-doc"> * This class demonstrates how to use Javadoc.</span>
+<span class="org-doc"> * </span><span class="org-doc"><span class="org-doc-markup">@author</span></span><span class="org-doc"> Oh</span>
+<span class="org-doc"> * </span><span class="org-doc"><span class="org-doc-markup">@version</span></span><span class="org-doc"> 1.0</span>
+<span class="org-doc"> */</span>
+<span class="org-keyword">public</span> <span class="org-keyword">class</span> <span class="org-type">JavadocExample</span> {
+
+    <span class="org-doc">/**</span>
+<span class="org-doc">     * This method adds two numbers.</span>
+<span class="org-doc">     * </span><span class="org-doc"><span class="org-doc-markup">@param</span></span><span class="org-doc"> a the first number</span>
+<span class="org-doc">     * </span><span class="org-doc"><span class="org-doc-markup">@param</span></span><span class="org-doc"> b the second number</span>
+<span class="org-doc">     * </span><span class="org-doc"><span class="org-doc-markup">@return</span></span><span class="org-doc"> the sum of a and b</span>
+<span class="org-doc">     */</span>
+    <span class="org-keyword">public</span> <span class="org-keyword">static</span> <span class="org-type">int</span> <span class="org-function-name">add</span>(<span class="org-type">int</span> <span class="org-variable-name">a</span>, <span class="org-type">int</span> <span class="org-variable-name">b</span>) {
+        <span class="org-keyword">return</span> a + b;
+    }
+
+    <span class="org-keyword">public</span> <span class="org-keyword">static</span> <span class="org-type">void</span> <span class="org-function-name">main</span>(<span class="org-type">String</span>[] <span class="org-variable-name">args</span>) {
+        System.out.println(<span class="org-string">"Sum: "</span> + add(5, 10));
+    }
+}
+</pre>
+</div>
+
+<hr />
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 29.4 (<a href="https://orgmode.org">Org</a> mode 9.6.15)</p>
+</div>
+</body>
+</html>

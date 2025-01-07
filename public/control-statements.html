@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+
+<link rel="stylesheet" href="readtheorg.css" />
+<link rel="stylesheet" href="rethink_inline.css" />
+<link rel="stylesheet" href="src.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/search.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgf3328df"><b>Java</b></a></li>
+<li><a href="#org17552eb">📚 สรุปเนื้อหาเรื่อง Control Statements (ภาษาไทย พร้อมตัวอย่างโค้ด) 💀</a>
+<ul>
+<li><a href="#org5fc1d08">📌 if Statement</a></li>
+<li><a href="#org99533c4">📌 if&#x2026;else Statement</a></li>
+<li><a href="#orgefad52f">📌 Nested if Statement</a></li>
+<li><a href="#org1c5f700">📌 switch Statement 💀💀</a></li>
+<li><a href="#org9970774">📌 while Loop</a></li>
+<li><a href="#org3c18be9">📌 do&#x2026;while Loop</a></li>
+<li><a href="#org4bbb0f4">📌 for Loop</a></li>
+<li><a href="#org7d53309">📌 Nested for Loop</a></li>
+<li><a href="#orge08866c">📌 break Statement 💀</a></li>
+<li><a href="#org339b702">📌 continue Statement 💀</a></li>
+<li><a href="#org008c2d8">📌 การใช้ Scanner รับค่าจากผู้ใช้ 💀💀</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf3328df" class="outline-2">
+<h2 id="orgf3328df"><a href="./index.html"><b>Java</b></a></h2>
+</div>
+<div id="outline-container-org17552eb" class="outline-2">
+<h2 id="org17552eb">📚 สรุปเนื้อหาเรื่อง Control Statements (ภาษาไทย พร้อมตัวอย่างโค้ด) 💀</h2>
+<div class="outline-text-2" id="text-org17552eb">
+<p>
+<b>เนื้อหาต่อจากนี้ถูกสร้างขึ้นโดย AI โดยใช้ข้อมูลจาก Presentation Slides เรื่อง Control Statements</b>
+</p>
+
+<hr />
+</div>
+
+<div id="outline-container-org5fc1d08" class="outline-3">
+<h3 id="org5fc1d08">📌 if Statement</h3>
+<div class="outline-text-3" id="text-org5fc1d08">
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-type">int</span> <span class="org-variable-name">number</span> = 10;
+<span class="org-keyword">if</span> (number &gt; 0) {
+    System.out.println(<span class="org-string">"The number is positive."</span>);  <span class="org-comment-delimiter">// </span><span class="org-comment">&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;: The number is positive.</span>
+}
+</pre>
+</div>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-org99533c4" class="outline-3">
+<h3 id="org99533c4">📌 if&#x2026;else Statement</h3>
+<div class="outline-text-3" id="text-org99533c4">
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-type">int</span> <span class="org-variable-name">number</span> = -5;
+<span class="org-keyword">if</span> (number &gt; 0) {
+    System.out.println(<span class="org-string">"The number is positive."</span>);
+} <span class="org-keyword">else</span> {
+    System.out.println(<span class="org-string">"The number is negative."</span>);  <span class="org-comment-delimiter">// </span><span class="org-comment">&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;: The number is negative.</span>
+}
+</pre>
+</div>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-orgefad52f" class="outline-3">
+<h3 id="orgefad52f">📌 Nested if Statement</h3>
+<div class="outline-text-3" id="text-orgefad52f">
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-type">int</span> <span class="org-variable-name">score</span> = 85;
+
+<span class="org-keyword">if</span> (score &gt;= 90) {
+    System.out.println(<span class="org-string">"Grade: A"</span>);
+} <span class="org-keyword">else</span> <span class="org-keyword">if</span> (score &gt;= 80) {
+    System.out.println(<span class="org-string">"Grade: B"</span>);  <span class="org-comment-delimiter">// </span><span class="org-comment">&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;: Grade: B</span>
+} <span class="org-keyword">else</span> <span class="org-keyword">if</span> (score &gt;= 70) {
+    System.out.println(<span class="org-string">"Grade: C"</span>);
+} <span class="org-keyword">else</span> {
+    System.out.println(<span class="org-string">"Grade: F"</span>);
+}
+</pre>
+</div>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-org1c5f700" class="outline-3">
+<h3 id="org1c5f700">📌 switch Statement 💀💀</h3>
+<div class="outline-text-3" id="text-org1c5f700">
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-type">int</span> <span class="org-variable-name">day</span> = 3;
+
+<span class="org-keyword">switch</span> (day) {
+    <span class="org-keyword">case</span> 1:
+        System.out.println(<span class="org-string">"Monday"</span>);
+        <span class="org-keyword">break</span>;
+    <span class="org-keyword">case</span> 2:
+        System.out.println(<span class="org-string">"Tuesday"</span>);
+        <span class="org-keyword">break</span>;
+    <span class="org-keyword">case</span> 3:
+        System.out.println(<span class="org-string">"Wednesday"</span>);  <span class="org-comment-delimiter">// </span><span class="org-comment">&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;: Wednesday</span>
+        <span class="org-keyword">break</span>;
+    <span class="org-keyword">default</span>:
+        System.out.println(<span class="org-string">"Invalid day"</span>);
+}
+</pre>
+</div>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-org9970774" class="outline-3">
+<h3 id="org9970774">📌 while Loop</h3>
+<div class="outline-text-3" id="text-org9970774">
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0;
+<span class="org-keyword">while</span> (i &lt; 5) {
+    System.out.println(<span class="org-string">"Count: "</span> + i);
+    i++;
+}
+<span class="org-comment-delimiter">// </span><span class="org-comment">&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;:</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">Count: 0</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">Count: 1</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">Count: 2</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">Count: 3</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">Count: 4</span>
+</pre>
+</div>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-org3c18be9" class="outline-3">
+<h3 id="org3c18be9">📌 do&#x2026;while Loop</h3>
+<div class="outline-text-3" id="text-org3c18be9">
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0;
+<span class="org-keyword">do</span> {
+    System.out.println(<span class="org-string">"Count: "</span> + i);
+    i++;
+} <span class="org-keyword">while</span> (i &lt; 5);
+<span class="org-comment-delimiter">// </span><span class="org-comment">&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;&#3648;&#3627;&#3617;&#3639;&#3629;&#3609;&#3585;&#3633;&#3610; while loop</span>
+</pre>
+</div>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-org4bbb0f4" class="outline-3">
+<h3 id="org4bbb0f4">📌 for Loop</h3>
+<div class="outline-text-3" id="text-org4bbb0f4">
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-keyword">for</span> (<span class="org-type">int</span> <span class="org-variable-name">i</span> = 1; i &lt;= 5; i++) {
+    System.out.println(<span class="org-string">"Iteration: "</span> + i);
+}
+<span class="org-comment-delimiter">// </span><span class="org-comment">&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;:</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">Iteration: 1</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">Iteration: 2</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">Iteration: 3</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">Iteration: 4</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">Iteration: 5</span>
+</pre>
+</div>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-org7d53309" class="outline-3">
+<h3 id="org7d53309">📌 Nested for Loop</h3>
+<div class="outline-text-3" id="text-org7d53309">
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-keyword">for</span> (<span class="org-type">int</span> <span class="org-variable-name">i</span> = 1; i &lt;= 2; i++) {
+    <span class="org-keyword">for</span> (<span class="org-type">int</span> <span class="org-variable-name">j</span> = 1; j &lt;= 4; j++) {
+        System.out.print(j + <span class="org-string">" "</span>);
+    }
+    System.out.println();
+}
+<span class="org-comment-delimiter">// </span><span class="org-comment">&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;:</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">1 2 3 4</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">1 2 3 4</span>
+</pre>
+</div>
+
+<hr />
+</div>
+</div>
+<div id="outline-container-orge08866c" class="outline-3">
+<h3 id="orge08866c">📌 break Statement 💀</h3>
+<div class="outline-text-3" id="text-orge08866c">
+<hr />
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-keyword">for</span> (<span class="org-type">int</span> <span class="org-variable-name">i</span> = 1; i &lt;= 5; i++) {
+    <span class="org-keyword">if</span> (i == 3) {
+        <span class="org-keyword">break</span>;
+    }
+    System.out.println(<span class="org-string">"Iteration: "</span> + i);
+}
+<span class="org-comment-delimiter">// </span><span class="org-comment">&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;:</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">Iteration: 1</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">Iteration: 2</span>
+</pre>
+</div>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-org339b702" class="outline-3">
+<h3 id="org339b702">📌 continue Statement 💀</h3>
+<div class="outline-text-3" id="text-org339b702">
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-keyword">for</span> (<span class="org-type">int</span> <span class="org-variable-name">i</span> = 1; i &lt;= 5; i++) {
+    <span class="org-keyword">if</span> (i == 3) {
+        <span class="org-keyword">continue</span>;
+    }
+    System.out.println(<span class="org-string">"Iteration: "</span> + i);
+}
+<span class="org-comment-delimiter">// </span><span class="org-comment">&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;:</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">Iteration: 1</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">Iteration: 2</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">Iteration: 4</span>
+<span class="org-comment-delimiter">// </span><span class="org-comment">Iteration: 5</span>
+</pre>
+</div>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-org008c2d8" class="outline-3">
+<h3 id="org008c2d8">📌 การใช้ Scanner รับค่าจากผู้ใช้ 💀💀</h3>
+<div class="outline-text-3" id="text-org008c2d8">
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-keyword">import</span> <span class="org-constant">java</span>.<span class="org-constant">util</span>.<span class="org-type">Scanner</span>;
+
+<span class="org-keyword">public</span> <span class="org-keyword">class</span> <span class="org-type">UserInput</span> {
+    <span class="org-keyword">public</span> <span class="org-keyword">static</span> <span class="org-type">void</span> <span class="org-function-name">main</span>(<span class="org-type">String</span>[] <span class="org-variable-name">args</span>) {
+        <span class="org-type">Scanner</span> <span class="org-variable-name">scanner</span> = <span class="org-keyword">new</span> <span class="org-type">Scanner</span>(System.in);
+
+        System.out.print(<span class="org-string">"Enter your age: "</span>);
+        <span class="org-type">int</span> <span class="org-variable-name">age</span> = scanner.nextInt();
+
+        <span class="org-keyword">if</span> (age &gt;= 18) {
+            System.out.println(<span class="org-string">"You are an adult."</span>);
+        } <span class="org-keyword">else</span> {
+            System.out.println(<span class="org-string">"You are not an adult."</span>);
+        }
+
+        scanner.close();
+    }
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 29.4 (<a href="https://orgmode.org">Org</a> mode 9.6.15)</p>
+</div>
+</body>
+</html>
