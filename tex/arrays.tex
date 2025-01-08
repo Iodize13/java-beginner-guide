@@ -1,0 +1,296 @@
+% Created 2025-01-08 Wed 18:06
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.4 (Org mode 9.7.11)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+\section{\href{./index.org}{\textbf{Java}}}
+\label{sec:org1322d8f}
+\section{สรุปเนื้อหาเรื่อง Arrays (พร้อมตัวอย่างโค้ด)}
+\label{sec:org4c7f192}
+ความยาก: \textbf{**}
+
+\textbf{เนื้อหาต่อจากนี้ถูกสร้างขึ้นโดย AI โดยใช้ข้อมูลจาก Presentation Slides เรื่อง Arrays}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{การสร้างและใช้งาน Array}
+\label{sec:org2682746}
+\begin{verbatim}
+// สร้าง Array เก็บจำนวนเต็ม 5 ค่า
+int[] numbers = new int[5];
+
+// กำหนดค่าใน Array
+numbers[0] = 10;
+numbers[1] = 20;
+numbers[2] = 30;
+numbers[3] = 40;
+numbers[4] = 50;
+
+// แสดงผลลัพธ์
+for (int i = 0; i < numbers.length; i++) {
+    System.out.println("Element " + i + ": " + numbers[i]);
+}
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{Array Initialization (การกำหนดค่าเริ่มต้น)}
+\label{sec:org6b70f35}
+\begin{verbatim}
+// สร้างและกำหนดค่าเริ่มต้นใน Array
+int[] list = {1, 2, 3, 4, 5};
+
+// แสดงผลลัพธ์
+for (int num : list) {
+    System.out.println(num);
+}
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{Frequents Errors About Array \textbf{*}}
+\label{sec:orgcbc250f}
+หากพยายามเข้าถึง index ที่ไม่มีใน array จะเกิดข้อผิดพลาด
+\texttt{ArrayIndexOutOfBoundsException}
+
+\begin{verbatim}
+int[] list = {1, 2, 3};
+System.out.println(list[3]);  // จะเกิด ArrayIndexOutOfBoundsException
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{Property \texttt{length} ใน Array หลายมิติ}
+\label{sec:org915290c}
+\begin{itemize}
+\item \texttt{A.length} ให้จำนวนแถวของ array
+\item \texttt{A[0].length} ให้จำนวนคอลัมน์ในแถวแรก
+\end{itemize}
+
+\begin{verbatim}
+int[][] A = {
+    {1, 2, 3, 4},
+    {5, 6, 7, 8},
+    {9, 10, 11, 12}
+};
+
+System.out.println("Number of rows: " + A.length);        // ผลลัพธ์: 3
+System.out.println("Number of columns in row 0: " + A[0].length);  // ผลลัพธ์: 4
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{Multi-dimensional Arrays (Array หลายมิติ) *}
+\label{sec:orge80bad3}
+\begin{verbatim}
+// สร้าง 2D Array (3 แถว 4 คอลัมน์)
+int[][] matrix = {
+    {1, 2, 3, 4},
+    {5, 6, 7, 8},
+    {9, 10, 11, 12}
+};
+
+// แสดงผลลัพธ์
+for (int i = 0; i < matrix.length; i++) {
+    for (int j = 0; j < matrix[i].length; j++) {
+        System.out.print(matrix[i][j] + " ");
+    }
+    System.out.println();
+}
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{การค้นหาค่าใน Array (Linear Search) *}
+\label{sec:org74b0cb3}
+\begin{verbatim}
+public class LinearSearch {
+    public static int search(int[] array, int target) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == target) {
+                return i;  // คืนค่า index ที่เจอ
+            }
+        }
+        return -1;  // คืนค่า -1 ถ้าไม่เจอ
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 30, 40, 50};
+        int index = search(numbers, 30);
+        System.out.println("Found at index: " + index);  // ผลลัพธ์: Found at index: 2
+    }
+}
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{การคัดลอกค่าใน Array (Array Copy) *}
+\label{sec:org5bb3115}
+\begin{itemize}
+\item \textbf{วิธีที่ 1: การคัดลอกแบบ Manual}
+\end{itemize}
+\begin{verbatim}
+int[] source = {1, 2, 3, 4, 5};
+int[] destination = new int[source.length];
+
+// คัดลอกค่า
+for (int i = 0; i < source.length; i++) {
+    destination[i] = source[i];
+}
+
+// แสดงผลลัพธ์
+for (int num : destination) {
+    System.out.println(num);
+}
+\end{verbatim}
+
+\begin{itemize}
+\item \textbf{วิธีที่ 2: การคัดลอกด้วย System.arraycopy()}
+\end{itemize}
+ความยาก: *
+\begin{verbatim}
+int[] source = {1, 2, 3, 4, 5};
+int[] destination = new int[source.length];
+
+// ใช้ System.arraycopy() ในการคัดลอก
+System.arraycopy(source, 0, destination, 0, source.length);
+
+// แสดงผลลัพธ์
+for (int num : destination) {
+    System.out.println(num);
+}
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{การเรียงลำดับค่าใน Array (Sorting) \textbf{**}}
+\label{sec:org8fe34b1}
+\begin{itemize}
+\item การเรียงลำดับค่าใน Array ด้วย Selection Sort
+\end{itemize}
+ความยาก: \textbf{**}
+\begin{verbatim}
+public class SelectionSort {
+    public static void sort(int[] array) {
+        for (int i = 0; i < array.length - 1; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[j] < array[minIndex]) {
+                    minIndex = j;
+                }
+            }
+            int temp = array[minIndex];
+            array[minIndex] = array[i];
+            array[i] = temp;
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = {64, 25, 12, 22, 11};
+        sort(numbers);
+        for (int num : numbers) {
+            System.out.print(num + " ");  // ผลลัพธ์: 11 12 22 25 64
+        }
+    }
+}
+\end{verbatim}
+\begin{itemize}
+\item \textbf{การเรียงลำดับด้วย Insertion Sort}
+\end{itemize}
+ความยาก: \textbf{**}
+\begin{verbatim}
+public class InsertionSort {
+    public static void sort(int[] array) {
+        for (int i = 1; i < array.length; i++) {
+            int key = array[i];
+            int j = i - 1;
+
+            while (j >= 0 && array[j] > key) {
+                array[j + 1] = array[j];
+                j--;
+            }
+            array[j + 1] = key;
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = {5, 2, 9, 1, 5, 6};
+        sort(numbers);
+
+        for (int num : numbers) {
+            System.out.print(num + " ");  // ผลลัพธ์: 1 2 5 5 6 9
+        }
+    }
+}
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{การค้นหาด้วย Binary Search (Binary Search) \textbf{*}}
+\label{sec:orgcd2390e}
+\begin{verbatim}
+public class BinarySearch {
+    public static int binarySearch(int[] array, int target) {
+        int low = 0;
+        int high = array.length - 1;
+
+        while (low <= high) {
+            int mid = (low + high) / 2;
+
+            if (array[mid] == target) {
+                return mid;  // คืนค่า index ที่เจอ
+            } else if (array[mid] < target) {
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+        return -1;  // คืนค่า -1 ถ้าไม่เจอ
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int index = binarySearch(numbers, 5);
+        System.out.println("Found at index: " + index);  // ผลลัพธ์: Found at index: 4
+    }
+}
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{การใช้ Arrays Utility ใน Java *}
+\label{sec:orgd370dc5}
+\begin{verbatim}
+import java.util.Arrays;
+
+public class ArrayUtilityExample {
+    public static void main(String[] args) {
+        int[] numbers = {5, 2, 9, 1, 5, 6};
+
+        // เรียงลำดับ Array
+        Arrays.sort(numbers);
+
+        // แสดงผลลัพธ์หลังเรียงลำดับ
+        System.out.println(Arrays.toString(numbers));  // ผลลัพธ์: [1, 2, 5, 5, 6, 9]
+
+        // ค้นหาด้วย Binary Search
+        int index = Arrays.binarySearch(numbers, 5);
+        System.out.println("Found at index: " + index);  // ผลลัพธ์: 2
+    }
+}
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\end{document}

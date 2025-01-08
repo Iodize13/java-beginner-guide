@@ -1,0 +1,264 @@
+% Created 2025-01-08 Wed 18:06
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.4 (Org mode 9.7.11)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+\section{\href{./index.org}{\textbf{Java}}}
+\label{sec:org7645b69}
+\section{สรุปเนื้อหาเรื่อง Variables and Data Types (พร้อมตัวอย่างโค้ด)}
+\label{sec:org04ab3fc}
+ความยาก: **
+
+\textbf{เนื้อหาต่อจากนี้ถูกสร้างขึ้นโดย AI โดยใช้ข้อมูลจาก Presentation Slides เรื่อง Variable and Data types}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{การเขียนโปรแกรม Java เบื้องต้น}
+\label{sec:orgabdad72}
+\begin{itemize}
+\item \textbf{Class (คลาส)}: โครงสร้างพื้นฐานของโปรแกรม Java
+ทุกโปรแกรมจะต้องเริ่มต้นด้วยคลาส
+
+\item \textbf{Main Method (เมธอดหลัก)}: จุดเริ่มต้นของการทำงานในโปรแกรม Java
+
+\begin{verbatim}
+  public class HelloWorld {
+      public static void main(String[] args) {
+          System.out.println("Hello World!");
+      }
+  }
+\end{verbatim}
+\end{itemize}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{ตัวแปร (Variables)}
+\label{sec:org6b18202}
+\begin{itemize}
+\item \textbf{ตัวแปร} คือ กล่องที่ใช้เก็บข้อมูลในหน่วยความจำ
+
+\item การประกาศตัวแปรใน Java ต้องระบุ \textbf{ชนิดข้อมูล (Type)} ก่อนเสมอ เช่น \texttt{int},
+\texttt{double}, \texttt{String}
+
+\begin{verbatim}
+  int age = 25;
+  double salary = 50000.0;
+\end{verbatim}
+\end{itemize}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{ชนิดข้อมูลพื้นฐาน (Primitive Data Types)}
+\label{sec:org790bc9b}
+\begin{center}
+\begin{tabular}{lrl}
+\textbf{ชนิดข้อมูล} & \textbf{ขนาด (บิต)} & \textbf{คำอธิบาย}\\
+\hline
+\texttt{byte} & 8 & จำนวนเต็มขนาดเล็ก\\
+\texttt{short} & 16 & จำนวนเต็มขนาดกลาง\\
+\texttt{int} & 32 & จำนวนเต็มทั่วไป\\
+\texttt{long} & 64 & จำนวนเต็มขนาดใหญ่\\
+\texttt{float} & 32 & จำนวนทศนิยม\\
+\texttt{double} & 64 & จำนวนทศนิยมที่มีความแม่นยำสูง\\
+\texttt{char} & 16 & ตัวอักษร Unicode\\
+\texttt{boolean} & 1 & ค่าจริงหรือเท็จ (\texttt{true/false})\\
+\end{tabular}
+\end{center}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{นิพจน์และการกำหนดค่าให้ตัวแปร (Expressions \& Variable Assignment)}
+\label{sec:org7fa956f}
+\begin{itemize}
+\item การกำหนดค่าให้ตัวแปรใช้เครื่องหมาย \texttt{=}
+
+\begin{verbatim}
+  int x = 10;
+  double interest = principal * rate;
+\end{verbatim}
+\end{itemize}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{เมธอด (Subroutines)}
+\label{sec:orga5b5ce1}
+\begin{itemize}
+\item \textbf{Subroutine} คือ ชุดคำสั่งที่รวบรวมไว้ภายใต้ชื่อเดียว และสามารถเรียกใช้ซ้ำได้
+
+\begin{verbatim}
+  public static int add(int a, int b) {
+      return a + b;
+  }
+\end{verbatim}
+\end{itemize}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{สายอักขระ (Strings) **}
+\label{sec:orgcf2b760}
+\begin{itemize}
+\item \textbf{String} คือ ลำดับของตัวอักษร ซึ่งจัดการโดยคลาส \texttt{String}
+\item \textbf{เมธอดที่ใช้บ่อย}:
+\begin{itemize}
+\item \texttt{length()}: คืนค่าความยาวของสายอักขระ
+\item \texttt{charAt(index)}: คืนค่าตัวอักษรที่ตำแหน่งที่ระบุ
+\item \texttt{toUpperCase()}, \texttt{toLowerCase()}: แปลงสายอักขระเป็นตัวพิมพ์ใหญ่หรือตัวพิมพ์เล็ก
+\end{itemize}
+\end{itemize}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{การใช้ Enum (Enumerations) \textbf{*}}
+\label{sec:org23d3081}
+\begin{itemize}
+\item \textbf{Enum} คือ ชนิดข้อมูลที่มีค่าคงที่ที่กำหนดไว้ล่วงหน้า
+
+\begin{verbatim}
+  enum Season { SPRING, SUMMER, FALL, WINTER }
+  Season vacation = Season.SUMMER;
+\end{verbatim}
+
+\item \textbf{เมธอด \texttt{ordinal()}}: ใช้คืนค่าลำดับของค่าใน Enum
+
+\begin{verbatim}
+  System.out.println(Season.SUMMER.ordinal()); // ผลลัพธ์: 1
+\end{verbatim}
+\end{itemize}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{ตัวอย่างการใช้ Enum \textbf{*}}
+\label{sec:org1f70104}
+\begin{verbatim}
+public class EnumDemo {
+    enum Day { SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY }
+    public static void main(String[] args) {
+        Day tgif = Day.FRIDAY;
+        System.out.println(tgif + " is the " + tgif.ordinal() + "-th day of the week.");
+    }
+}
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{กฎการตั้งชื่อใน Java (Syntax Rules)}
+\label{sec:orge6d20f9}
+\begin{itemize}
+\item \textbf{Identifiers (ตัวระบุ)} คือ ชื่อที่ใช้เรียกตัวแปร คลาส หรือเมธอด
+\item ต้องเริ่มต้นด้วยตัวอักษรหรือ \texttt{\_} และไม่มีช่องว่างระหว่างชื่อ
+\item ตัวพิมพ์ใหญ่และตัวพิมพ์เล็กถือว่าแตกต่างกัน เช่น \texttt{HelloWorld} ไม่เหมือนกับ
+\texttt{helloworld}
+\item ห้ามใช้ \textbf{Reserved Words (คำสงวน)} เช่น \texttt{class}, \texttt{public}, \texttt{static}, \texttt{if},
+\texttt{else}
+\end{itemize}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{โครงสร้างโปรแกรม Java}
+\label{sec:orga4b835e}
+\begin{itemize}
+\item โครงสร้างพื้นฐานของโปรแกรม Java:
+
+\begin{verbatim}
+  public class ProgramName {
+      public static void main(String[] args) {
+          // คำสั่งที่ต้องการให้โปรแกรมทำงาน
+      }
+  }
+\end{verbatim}
+
+\item ชื่อคลาสต้องตรงกับชื่อไฟล์ เช่น คลาส \texttt{HelloWorld} ต้องบันทึกในไฟล์
+\texttt{HelloWorld.java}
+\end{itemize}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{ชนิดข้อมูล Math และเมธอดที่สำคัญ *}
+\label{sec:org868097c}
+\begin{itemize}
+\item คลาส \textbf{Math} มีเมธอดที่ใช้คำนวณต่างๆ เช่น
+\begin{itemize}
+\item \texttt{Math.abs(x)}: ค่าสัมบูรณ์
+\item \texttt{Math.pow(x, y)}: ยกกำลัง
+\item \texttt{Math.random()}: สุ่มตัวเลขระหว่าง 0 ถึง 1
+\end{itemize}
+\end{itemize}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{การวัดเวลาในโปรแกรม *}
+\label{sec:org043c231}
+\begin{itemize}
+\item ใช้เมธอด \texttt{System.currentTimeMillis()} เพื่อวัดเวลาปัจจุบันในหน่วยมิลลิวินาที
+
+\item สามารถนำไปใช้วัดเวลาการทำงานของโปรแกรมได้
+
+\begin{verbatim}
+  long startTime = System.currentTimeMillis();
+  // โค้ดที่ต้องการวัดเวลา
+  long endTime = System.currentTimeMillis();
+  System.out.println("Run time: " + (endTime - startTime) + " ms");
+\end{verbatim}
+\end{itemize}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{การรับค่า Program Arguments}
+\label{sec:org43cca2b}
+\begin{itemize}
+\item โปรแกรม Java สามารถรับค่า argument จากคอมมานด์ไลน์ได้
+
+\begin{verbatim}
+  public static void main(String[] args) {
+      System.out.println(args[0]); // แสดงค่า argument ตัวแรก
+  }
+\end{verbatim}
+
+\item ใช้ \texttt{Integer.parseInt()} หรือ \texttt{Double.parseDouble()} เพื่อแปลงค่าจาก String
+เป็นตัวเลข
+\end{itemize}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{ตัวอย่างโปรแกรม Java}
+\label{sec:org597d7ac}
+\begin{itemize}
+\item \textbf{โปรแกรม HelloWorld}
+\end{itemize}
+
+\begin{verbatim}
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
+}
+\end{verbatim}
+
+\begin{itemize}
+\item \textbf{โปรแกรมคำนวณดอกเบี้ย (Interest.java)}
+\end{itemize}
+
+\begin{verbatim}
+public class Interest {
+    public static void main(String[] args) {
+        double principal = 17000;
+        double rate = 0.07;
+        double interest = principal * rate;
+        principal = principal + interest;
+
+        System.out.println("The interest earned is $" + interest);
+        System.out.println("The value after one year is $" + principal);
+    }
+}
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\end{document}

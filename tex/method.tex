@@ -1,0 +1,160 @@
+% Created 2025-01-08 Wed 18:06
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.4 (Org mode 9.7.11)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+\section{\href{./index.org}{\textbf{Java}}}
+\label{sec:org24f807e}
+\section{สรุปเนื้อหาเรื่อง Methods (พร้อมตัวอย่างโค้ด)}
+\label{sec:org434b6b8}
+ความยาก: **
+
+\textbf{เนื้อหาต่อจากนี้ถูกสร้างขึ้นโดย AI โดยใช้ข้อมูลจาก Presentation Slides เรื่อง Methods}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{ตัวอย่างโครงสร้าง Method พื้นฐาน}
+\label{sec:org275f874}
+\begin{verbatim}
+public class MethodsExample {
+    // Method ชื่อ add รับพารามิเตอร์สองตัวและคืนค่าผลรวม
+    public static int add(int a, int b) {
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+        int result = add(5, 10);
+        System.out.println("Result: " + result);  // ผลลัพธ์: 15
+    }
+}
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{ตัวอย่างการประกาศและนิยาม Method}
+\label{sec:org04eca66}
+\begin{verbatim}
+// การประกาศ Method
+static int max(int num1, int num2);
+
+// การนิยาม Method
+static int max(int num1, int num2) {
+    if (num1 > num2) {
+        return num1;
+    } else {
+        return num2;
+    }
+}
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{การเรียกใช้งาน Method (Method Call)}
+\label{sec:org9c314df}
+\begin{verbatim}
+public static void main(String[] args) {
+    int i = 5;
+    int j = 2;
+    int result = max(i, j);
+    System.out.println("Max value is: " + result);  // ผลลัพธ์: Max value is: 5
+}
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{การส่งค่าพารามิเตอร์ (Passing Parameters)}
+\label{sec:org0b8197f}
+\begin{verbatim}
+// Method สลับค่าตัวแปรสองตัว
+static void swap(int a, int b) {
+    int temp = a;
+    a = b;
+    b = temp;
+    System.out.println("Inside swap method: a = " + a + ", b = " + b);
+}
+
+public static void main(String[] args) {
+    int m = 2;
+    int n = 3;
+    System.out.println("Before swap: m = " + m + ", n = " + n);
+    swap(m, n);
+    System.out.println("After swap: m = " + m + ", n = " + n);  // ค่าไม่เปลี่ยน
+}
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{การ Overloading Method **}
+\label{sec:orgdfca0f6}
+\begin{verbatim}
+// การ Overloading Method ด้วยชื่อเดียวกันแต่ต่างกันที่ชนิดพารามิเตอร์
+static int max(int num1, int num2) {
+    return (num1 > num2) ? num1 : num2;
+}
+
+static double max(double num1, double num2) {
+    return (num1 > num2) ? num1 : num2;
+}
+
+public static void main(String[] args) {
+    System.out.println(max(5, 10));        // ผลลัพธ์: 10
+    System.out.println(max(5.5, 10.1));    // ผลลัพธ์: 10.1
+}
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{Method ที่เรียกตัวเอง (Recursive Method) \textbf{*}}
+\label{sec:orgdeda434}
+\begin{verbatim}
+// การคำนวณ Factorial ด้วยการใช้ Recursive Method
+static long factorial(int n) {
+    if (n == 0) { // เงื่อนไขหยุด
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+public static void main(String[] args) {
+    int number = 5;
+    System.out.println("Factorial of " + number + " is " + factorial(number));  // ผลลัพธ์: 120
+}
+\end{verbatim}
+\subsubsection{Recursive Method Stopping Condition}
+\label{sec:orge769fac}
+ถ้า Recursive Method ไม่มีเงื่อนไขหยุด จะทำให้เกิด \textbf{StackOverflowError}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{การใช้งาน Method จากแพ็กเกจมาตรฐาน (API) *}
+\label{sec:org25e10c9}
+\begin{verbatim}
+import java.util.Scanner;
+
+public class InputExample {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int number = input.nextInt();
+        System.out.println("You entered: " + number);
+        input.close();
+    }
+}
+\end{verbatim}
+\end{document}

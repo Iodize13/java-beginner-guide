@@ -1,0 +1,165 @@
+% Created 2025-01-08 Wed 18:06
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.4 (Org mode 9.7.11)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+\section{\href{./index.org}{\textbf{Java}}}
+\label{sec:org1c08fc1}
+\section{สรุปเนื้อหาเรื่อง Operations, Packages, and Programming Styles (พร้อมตัวอย่างโค้ด)}
+\label{sec:orgc04df1e}
+\textbf{เนื้อหาต่อจากนี้ถูกสร้างขึ้นโดย AI โดยใช้ข้อมูลจาก Presentation Slides เรื่อง Operations, Packages, and Programming Styles}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{การดำเนินการทางคณิตศาสตร์ใน Java (Arithmetic Operations)}
+\label{sec:org3599026}
+\begin{itemize}
+\item \textbf{ตัวอย่างการใช้งานตัวดำเนินการพื้นฐาน}
+\end{itemize}
+\begin{verbatim}
+int a = 10;
+int b = 3;
+
+System.out.println(a + b);   // ผลลัพธ์: 13
+System.out.println(a - b);   // ผลลัพธ์: 7
+System.out.println(a * b);   // ผลลัพธ์: 30
+System.out.println(a / b);   // ผลลัพธ์: 3
+System.out.println(a % b);   // ผลลัพธ์: 1
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{ตัวดำเนินการแบบย่อ (Shortcut Operators)}
+\label{sec:org4122d5b}
+\begin{verbatim}
+int num = 5;
+
+num += 3;  // num = num + 3;
+System.out.println(num);  // ผลลัพธ์: 8
+
+num *= 2;  // num = num * 2;
+System.out.println(num);  // ผลลัพธ์: 16
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{การเพิ่มและลดค่า (Increment \& Decrement Operators)}
+\label{sec:org7df76c2}
+\begin{verbatim}
+int x = 1;
+
+// Post-Increment (x++ ใช้ค่าเดิมก่อนค่อยเพิ่ม)
+System.out.println(x++);  // ผลลัพธ์: 1
+System.out.println(x);    // ผลลัพธ์: 2
+
+// Pre-Increment (++x เพิ่มค่าก่อนแล้วค่อยใช้)
+System.out.println(++x);  // ผลลัพธ์: 3
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{ตัวดำเนินการเปรียบเทียบ (Relational Operators)}
+\label{sec:org0086cbb}
+\begin{verbatim}
+int a = 10;
+int b = 5;
+
+System.out.println(a == b);   // ผลลัพธ์: false
+System.out.println(a != b);   // ผลลัพธ์: true
+System.out.println(a > b);    // ผลลัพธ์: true
+System.out.println(a <= b);   // ผลลัพธ์: false
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{ตัวดำเนินการแบบเงื่อนไข (Conditional Operator) *}
+\label{sec:org4d08e4c}
+\begin{verbatim}
+int n = 3;
+int next = (n % 2 == 0) ? (n / 2) : (3 * n + 1);
+System.out.println(next);  // ผลลัพธ์: 10
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{การแปลงชนิดข้อมูล (Type Casting) *}
+\label{sec:org8c8078b}
+\begin{verbatim}
+int a = 10;
+double b = a;  // แปลงจาก int เป็น double อัตโนมัติ
+
+double c = 9.99;
+int d = (int) c;  // แปลงจาก double เป็น int โดยใช้การ cast
+System.out.println(d);  // ผลลัพธ์: 9
+\end{verbatim}
+
+\textbf{ข้อควรระวัง}: การแปลงจาก \texttt{double} เป็น \texttt{int} จะตัดทศนิยมทิ้ง
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{การใช้แพ็กเกจใน Java (Java Packages) *}
+\label{sec:orge6ec761}
+\begin{itemize}
+\item \textbf{ตัวอย่างการนำเข้าแพ็กเกจ}
+\end{itemize}
+\begin{verbatim}
+import java.util.*; //แนะนำให้ใช้ * เพราะรวมทุก packages ให้เลย
+
+public class InputExample {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter your name: ");
+        String name = input.nextLine();
+        System.out.println("Hello, " + name);
+        input.close();
+    }
+}
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{การจัดการเอกสารโค้ดด้วย Javadoc *}
+\label{sec:org48ee709}
+\begin{itemize}
+\item \textbf{ตัวอย่าง Javadoc Comment}
+\end{itemize}
+\begin{verbatim}
+/**
+ * This class demonstrates how to use Javadoc.
+ * @author Oh
+ * @version 1.0
+ */
+public class JavadocExample {
+
+    /**
+     * This method adds two numbers.
+     * @param a the first number
+     * @param b the second number
+     * @return the sum of a and b
+     */
+    public static int add(int a, int b) {
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Sum: " + add(5, 10));
+    }
+}
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\end{document}

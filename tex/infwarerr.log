@@ -1,0 +1,151 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=latex 2025.1.7)  8 JAN 2025 00:08
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**infwarerr.dtx
+(./infwarerr.dtx
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+File: infwarerr.drv 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+(/usr/share/texmf-dist/tex/latex/base/ltxdoc.cls
+Document Class: ltxdoc 2023/03/28 v2.1j Standard LaTeX documentation class
+*************************************
+* Local config file ltxdoc.cfg used
+*************************************
+(/usr/share/texmf-dist/tex/latex/base/ltxdoc.cfg
+File: ltxdoc.cfg 2022/06/14 v2.0d ltxdoc.cls configuration (LaTeX Project)
+)
+(/usr/share/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count188
+\c@section=\count189
+\c@subsection=\count190
+\c@subsubsection=\count191
+\c@paragraph=\count192
+\c@subparagraph=\count193
+\c@figure=\count194
+\c@table=\count195
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+(/usr/share/texmf-dist/tex/latex/base/doc.sty
+Package: doc 2022/11/13 v3.0m Standard LaTeX documentation package V3 (FMi)
+\c@StandardModuleDepth=\count196
+\guard@level=\count197
+\MacrocodeTopsep=\skip50
+\MacroIndent=\dimen141
+\macro@cnt=\count198
+\MacroTopsep=\skip51
+\IndexMin=\dimen142
+\c@IndexColumns=\count199
+
+(/usr/share/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
+\c@tracingmulticols=\count266
+\mult@box=\box51
+\multicol@leftmargin=\dimen143
+\c@unbalance=\count267
+\c@collectmore=\count268
+\doublecol@number=\count269
+\multicoltolerance=\count270
+\multicolpretolerance=\count271
+\full@width=\dimen144
+\page@free=\dimen145
+\premulticols=\dimen146
+\postmulticols=\dimen147
+\multicolsep=\skip52
+\multicolbaselineskip=\skip53
+\partial@page=\box52
+\last@line=\box53
+\mc@boxedresult=\box54
+\maxbalancingoverflow=\dimen148
+\mult@rightbox=\box55
+\mult@grightbox=\box56
+\mult@firstbox=\box57
+\mult@gfirstbox=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\c@minrows=\count272
+\c@columnbadness=\count273
+\c@finalcolumnbadness=\count274
+\last@try=\dimen149
+\multicolovershoot=\dimen150
+\multicolundershoot=\dimen151
+\mult@nat@firstbox=\box95
+\colbreak@box=\box96
+\mc@col@check@num=\count275
+)
+\GlossaryMin=\dimen152
+\c@GlossaryColumns=\count276
+\check@sum=\count277
+\bslash@cnt=\count278
+\wrong@table=\toks17
+\c@CodelineNo=\count279
+\@temptokenb=\toks18
+))
+(/usr/share/texmf-dist/tex/latex/oberdiek/holtxdoc.sty
+Package: holtxdoc 2019/12/09 v0.30 Private additional ltxdoc support (HO)
+
+
+! LaTeX Error: File `hypdoc.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+Enter file name: X
+
+! Emergency stop.
+<read *> 
+         
+l.43 \RequirePackage[numbered]{hypdoc}[2010/03/26]
+                                                  
+*** (cannot \read from terminal in nonstop modes)
+
+ 
+Here is how much of TeX's memory you used:
+ 877 strings out of 476077
+ 14080 string characters out of 5793802
+ 1925184 words of memory out of 5000000
+ 23058 multiletter control sequences out of 15000+600000
+ 558069 words of font info for 36 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 61i,1n,65p,250b,91s stack positions out of 10000i,1000n,20000p,200000b,200000s
+No pages of output.

@@ -1,0 +1,198 @@
+* [[./index.org][*Java*]]
+* สรุปเนื้อหาเรื่อง Variables and Data Types (พร้อมตัวอย่างโค้ด)
+ความยาก: **
+
+*เนื้อหาต่อจากนี้ถูกสร้างขึ้นโดย AI โดยใช้ข้อมูลจาก Presentation Slides เรื่อง Variable and Data types*
+--------------
+
+** การเขียนโปรแกรม Java เบื้องต้น
+- *Class (คลาส)*: โครงสร้างพื้นฐานของโปรแกรม Java
+  ทุกโปรแกรมจะต้องเริ่มต้นด้วยคลาส
+
+- *Main Method (เมธอดหลัก)*: จุดเริ่มต้นของการทำงานในโปรแกรม Java
+
+  #+begin_src java
+  public class HelloWorld {
+      public static void main(String[] args) {
+          System.out.println("Hello World!");
+      }
+  }
+  #+end_src
+
+--------------
+
+** ตัวแปร (Variables)
+- *ตัวแปร* คือ กล่องที่ใช้เก็บข้อมูลในหน่วยความจำ
+
+- การประกาศตัวแปรใน Java ต้องระบุ *ชนิดข้อมูล (Type)* ก่อนเสมอ เช่น =int=,
+  =double=, =String=
+
+  #+begin_src java
+  int age = 25;
+  double salary = 50000.0;
+  #+end_src
+
+--------------
+
+** ชนิดข้อมูลพื้นฐาน (Primitive Data Types)
+| *ชนิดข้อมูล* | *ขนาด (บิต)* | *คำอธิบาย*                  |
+|------------+--------------+----------------------------|
+| =byte=     |            8 | จำนวนเต็มขนาดเล็ก            |
+| =short=    |           16 | จำนวนเต็มขนาดกลาง           |
+| =int=      |           32 | จำนวนเต็มทั่วไป               |
+| =long=     |           64 | จำนวนเต็มขนาดใหญ่            |
+| =float=    |           32 | จำนวนทศนิยม                |
+| =double=   |           64 | จำนวนทศนิยมที่มีความแม่นยำสูง   |
+| =char=     |           16 | ตัวอักษร Unicode             |
+| =boolean=  |            1 | ค่าจริงหรือเท็จ (=true/false=) |
+
+--------------
+
+** นิพจน์และการกำหนดค่าให้ตัวแปร (Expressions & Variable Assignment)
+- การกำหนดค่าให้ตัวแปรใช้เครื่องหมาย ===
+
+  #+begin_src java
+  int x = 10;
+  double interest = principal * rate;
+  #+end_src
+
+--------------
+
+** เมธอด (Subroutines)
+- *Subroutine* คือ ชุดคำสั่งที่รวบรวมไว้ภายใต้ชื่อเดียว และสามารถเรียกใช้ซ้ำได้
+
+  #+begin_src java
+  public static int add(int a, int b) {
+      return a + b;
+  }
+  #+end_src
+
+--------------
+
+** สายอักขระ (Strings) **
+- *String* คือ ลำดับของตัวอักษร ซึ่งจัดการโดยคลาส =String=
+- *เมธอดที่ใช้บ่อย*:
+  - =length()=: คืนค่าความยาวของสายอักขระ
+  - =charAt(index)=: คืนค่าตัวอักษรที่ตำแหน่งที่ระบุ
+  - =toUpperCase()=, =toLowerCase()=: แปลงสายอักขระเป็นตัวพิมพ์ใหญ่หรือตัวพิมพ์เล็ก
+
+--------------
+
+** การใช้ Enum (Enumerations) ***
+- *Enum* คือ ชนิดข้อมูลที่มีค่าคงที่ที่กำหนดไว้ล่วงหน้า
+
+  #+begin_src java
+  enum Season { SPRING, SUMMER, FALL, WINTER }
+  Season vacation = Season.SUMMER;
+  #+end_src
+
+- *เมธอด =ordinal()=*: ใช้คืนค่าลำดับของค่าใน Enum
+
+  #+begin_src java
+  System.out.println(Season.SUMMER.ordinal()); // ผลลัพธ์: 1
+  #+end_src
+
+--------------
+
+** ตัวอย่างการใช้ Enum ***
+#+begin_src java
+public class EnumDemo {
+    enum Day { SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY }
+    public static void main(String[] args) {
+        Day tgif = Day.FRIDAY;
+        System.out.println(tgif + " is the " + tgif.ordinal() + "-th day of the week.");
+    }
+}
+#+end_src
+
+--------------
+** กฎการตั้งชื่อใน Java (Syntax Rules)
+- *Identifiers (ตัวระบุ)* คือ ชื่อที่ใช้เรียกตัวแปร คลาส หรือเมธอด
+- ต้องเริ่มต้นด้วยตัวอักษรหรือ =_= และไม่มีช่องว่างระหว่างชื่อ
+- ตัวพิมพ์ใหญ่และตัวพิมพ์เล็กถือว่าแตกต่างกัน เช่น =HelloWorld= ไม่เหมือนกับ
+  =helloworld=
+- ห้ามใช้ *Reserved Words (คำสงวน)* เช่น =class=, =public=, =static=, =if=,
+  =else=
+
+--------------
+
+** โครงสร้างโปรแกรม Java
+- โครงสร้างพื้นฐานของโปรแกรม Java:
+
+  #+begin_src java
+  public class ProgramName {
+      public static void main(String[] args) {
+          // คำสั่งที่ต้องการให้โปรแกรมทำงาน
+      }
+  }
+  #+end_src
+
+- ชื่อคลาสต้องตรงกับชื่อไฟล์ เช่น คลาส =HelloWorld= ต้องบันทึกในไฟล์
+  =HelloWorld.java=
+
+--------------
+
+** ชนิดข้อมูล Math และเมธอดที่สำคัญ *
+- คลาส *Math* มีเมธอดที่ใช้คำนวณต่างๆ เช่น
+  - =Math.abs(x)=: ค่าสัมบูรณ์
+  - =Math.pow(x, y)=: ยกกำลัง
+  - =Math.random()=: สุ่มตัวเลขระหว่าง 0 ถึง 1
+
+--------------
+
+** การวัดเวลาในโปรแกรม *
+- ใช้เมธอด =System.currentTimeMillis()= เพื่อวัดเวลาปัจจุบันในหน่วยมิลลิวินาที
+
+- สามารถนำไปใช้วัดเวลาการทำงานของโปรแกรมได้
+
+  #+begin_src java
+  long startTime = System.currentTimeMillis();
+  // โค้ดที่ต้องการวัดเวลา
+  long endTime = System.currentTimeMillis();
+  System.out.println("Run time: " + (endTime - startTime) + " ms");
+  #+end_src
+
+--------------
+
+** การรับค่า Program Arguments
+- โปรแกรม Java สามารถรับค่า argument จากคอมมานด์ไลน์ได้
+
+  #+begin_src java
+  public static void main(String[] args) {
+      System.out.println(args[0]); // แสดงค่า argument ตัวแรก
+  }
+  #+end_src
+
+- ใช้ =Integer.parseInt()= หรือ =Double.parseDouble()= เพื่อแปลงค่าจาก String
+  เป็นตัวเลข
+
+--------------
+
+** ตัวอย่างโปรแกรม Java
+- *โปรแกรม HelloWorld*
+
+#+begin_src java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
+}
+#+end_src
+
+- *โปรแกรมคำนวณดอกเบี้ย (Interest.java)*
+
+#+begin_src java
+public class Interest {
+    public static void main(String[] args) {
+        double principal = 17000;
+        double rate = 0.07;
+        double interest = principal * rate;
+        principal = principal + interest;
+
+        System.out.println("The interest earned is $" + interest);
+        System.out.println("The value after one year is $" + principal);
+    }
+}
+#+end_src
+
+--------------

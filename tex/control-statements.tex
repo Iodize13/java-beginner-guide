@@ -1,0 +1,211 @@
+% Created 2025-01-08 Wed 18:06
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.4 (Org mode 9.7.11)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+\section{\href{./index.org}{\textbf{Java}}}
+\label{sec:orgd7e1155}
+\section{สรุปเนื้อหาเรื่อง Control Statements (ภาษาไทย พร้อมตัวอย่างโค้ด)}
+\label{sec:org951248f}
+ความยาก: *
+
+\textbf{เนื้อหาต่อจากนี้ถูกสร้างขึ้นโดย AI โดยใช้ข้อมูลจาก Presentation Slides เรื่อง Control Statements}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{if Statement}
+\label{sec:org04a4692}
+\begin{verbatim}
+int number = 10;
+if (number > 0) {
+    System.out.println("The number is positive.");  // ผลลัพธ์: The number is positive.
+}
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{if\ldots{}else Statement}
+\label{sec:orgede11d1}
+\begin{verbatim}
+int number = -5;
+if (number > 0) {
+    System.out.println("The number is positive.");
+} else {
+    System.out.println("The number is negative.");  // ผลลัพธ์: The number is negative.
+}
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{Nested if Statement}
+\label{sec:org850fcbb}
+\begin{verbatim}
+int score = 85;
+
+if (score >= 90) {
+    System.out.println("Grade: A");
+} else if (score >= 80) {
+    System.out.println("Grade: B");  // ผลลัพธ์: Grade: B
+} else if (score >= 70) {
+    System.out.println("Grade: C");
+} else {
+    System.out.println("Grade: F");
+}
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{switch Statement **}
+\label{sec:orgad536ac}
+\begin{verbatim}
+int day = 3;
+
+switch (day) {
+    case 1:
+        System.out.println("Monday");
+        break;
+    case 2:
+        System.out.println("Tuesday");
+        break;
+    case 3:
+        System.out.println("Wednesday");  // ผลลัพธ์: Wednesday
+        break;
+    default:
+        System.out.println("Invalid day");
+}
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{while Loop}
+\label{sec:orgd1f3c6c}
+\begin{verbatim}
+int i = 0;
+while (i < 5) {
+    System.out.println("Count: " + i);
+    i++;
+}
+// ผลลัพธ์:
+// Count: 0
+// Count: 1
+// Count: 2
+// Count: 3
+// Count: 4
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{do\ldots{}while Loop}
+\label{sec:org813210a}
+\begin{verbatim}
+int i = 0;
+do {
+    System.out.println("Count: " + i);
+    i++;
+} while (i < 5);
+// ผลลัพธ์เหมือนกับ while loop
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{for Loop}
+\label{sec:org6f2c711}
+\begin{verbatim}
+for (int i = 1; i <= 5; i++) {
+    System.out.println("Iteration: " + i);
+}
+// ผลลัพธ์:
+// Iteration: 1
+// Iteration: 2
+// Iteration: 3
+// Iteration: 4
+// Iteration: 5
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{Nested for Loop}
+\label{sec:orgd476b72}
+\begin{verbatim}
+for (int i = 1; i <= 2; i++) {
+    for (int j = 1; j <= 4; j++) {
+        System.out.print(j + " ");
+    }
+    System.out.println();
+}
+// ผลลัพธ์:
+// 1 2 3 4
+// 1 2 3 4
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{break Statement *}
+\label{sec:orgfc4dee0}
+\noindent\rule{\textwidth}{0.5pt}
+\begin{verbatim}
+for (int i = 1; i <= 5; i++) {
+    if (i == 3) {
+        break;
+    }
+    System.out.println("Iteration: " + i);
+}
+// ผลลัพธ์:
+// Iteration: 1
+// Iteration: 2
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{continue Statement *}
+\label{sec:org8563585}
+\begin{verbatim}
+for (int i = 1; i <= 5; i++) {
+    if (i == 3) {
+        continue;
+    }
+    System.out.println("Iteration: " + i);
+}
+// ผลลัพธ์:
+// Iteration: 1
+// Iteration: 2
+// Iteration: 4
+// Iteration: 5
+\end{verbatim}
+
+\noindent\rule{\textwidth}{0.5pt}
+\subsection{การใช้ Scanner รับค่าจากผู้ใช้ **}
+\label{sec:orge5f022b}
+\begin{verbatim}
+import java.util.Scanner;
+
+public class UserInput {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();
+
+        if (age >= 18) {
+            System.out.println("You are an adult.");
+        } else {
+            System.out.println("You are not an adult.");
+        }
+
+        scanner.close();
+    }
+}
+\end{verbatim}
+\end{document}
