@@ -45,8 +45,7 @@ if (score >= 90) {
 
 --------------
 
-** 📌 switch Statement
-ความยาก: 💀💀
+** 📌 switch Statement 💀💀
 #+begin_src java
 int day = 3;
 
@@ -125,8 +124,8 @@ for (int i = 1; i <= 2; i++) {
 #+end_src
 
 --------------
-** 📌 break Statement
-ความยาก: 💀
+
+** 📌 break Statement 💀
 --------------
 #+begin_src java
 for (int i = 1; i <= 5; i++) {
@@ -142,8 +141,7 @@ for (int i = 1; i <= 5; i++) {
 
 --------------
 
-** 📌 continue Statement
-ความยาก: 💀
+** 📌 continue Statement 💀
 #+begin_src java
 for (int i = 1; i <= 5; i++) {
     if (i == 3) {
@@ -160,8 +158,7 @@ for (int i = 1; i <= 5; i++) {
 
 --------------
 
-** 📌 การใช้ Scanner รับค่าจากผู้ใช้
-ความยาก: 💀💀
+** 📌 การใช้ Scanner รับค่าจากผู้ใช้ 💀💀
 #+begin_src java
 import java.util.Scanner;
 

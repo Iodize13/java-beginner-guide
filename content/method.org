@@ -73,8 +73,7 @@ public static void main(String[] args) {
 
 --------------
 
-** 📌 การ Overloading Method
-ความยาก: 💀💀
+** 📌 การ Overloading Method 💀💀
 #+begin_src java
 // การ Overloading Method ด้วยชื่อเดียวกันแต่ต่างกันที่ชนิดพารามิเตอร์
 static int max(int num1, int num2) {
@@ -93,8 +92,7 @@ public static void main(String[] args) {
 
 --------------
 
-** 📌 Method ที่เรียกตัวเอง (Recursive Method)
-ความยาก: 💀💀💀
+** 📌 Method ที่เรียกตัวเอง (Recursive Method) 💀💀💀
 #+begin_src java
 // การคำนวณ Factorial ด้วยการใช้ Recursive Method
 static long factorial(int n) {
@@ -115,8 +113,7 @@ public static void main(String[] args) {
 
 --------------
 
-** 📌 การใช้งาน Method จากแพ็กเกจมาตรฐาน (API)
-ความยาก: 💀
+** 📌 การใช้งาน Method จากแพ็กเกจมาตรฐาน (API) 💀
 #+begin_src java
 import java.util.Scanner;
 

@@ -41,8 +41,7 @@ for (int num : list) {
 
 --------------
 
-** 📌 Frequents Errors About Array
-ความยาก: 💀💀💀
+** 📌 Frequents Errors About Array 💀💀💀
 หากพยายามเข้าถึง index ที่ไม่มีใน array จะเกิดข้อผิดพลาด
 =ArrayIndexOutOfBoundsException=
 
@@ -70,8 +69,7 @@ System.out.println("Number of columns in row 0: " + A[0].length);  // ผลล�
 
 --------------
 
-** 📌 Multi-dimensional Arrays (Array หลายมิติ)
-ความยาก: 💀
+** 📌 Multi-dimensional Arrays (Array หลายมิติ) 💀
 #+begin_src java
 // สร้าง 2D Array (3 แถว 4 คอลัมน์)
 int[][] matrix = {
@@ -91,8 +89,7 @@ for (int i = 0; i < matrix.length; i++) {
 
 --------------
 
-** 📌 การค้นหาค่าใน Array (Linear Search)
-ความยาก: 💀
+** 📌 การค้นหาค่าใน Array (Linear Search) 💀
 #+begin_src java
 public class LinearSearch {
     public static int search(int[] array, int target) {
@@ -114,8 +111,7 @@ public class LinearSearch {
 
 --------------
 
-** 📌 การคัดลอกค่าใน Array (Array Copy)
-ความยาก: 💀
+** 📌 การคัดลอกค่าใน Array (Array Copy) 💀
 - 📋 *วิธีที่ 1: การคัดลอกแบบ Manual*
 #+begin_src java
 int[] source = {1, 2, 3, 4, 5};
@@ -149,8 +145,7 @@ for (int num : destination) {
 
 --------------
 
-** 📌 การเรียงลำดับค่าใน Array (Sorting)
-ความยาก: 💀💀💀💀
+** 📌 การเรียงลำดับค่าใน Array (Sorting) 💀💀💀💀
 - ✅ การเรียงลำดับค่าใน Array ด้วย Selection Sort
 ความยาก: 💀💀💀💀
 #+begin_src java
@@ -208,8 +203,7 @@ public class InsertionSort {
 
 --------------
 
-** 📌 การค้นหาด้วย Binary Search (Binary Search)
-ความยาก: 💀💀💀
+** 📌 การค้นหาด้วย Binary Search (Binary Search) 💀💀💀
 #+begin_src java
 public class BinarySearch {
     public static int binarySearch(int[] array, int target) {
@@ -240,8 +234,7 @@ public class BinarySearch {
 
 --------------
 
-** 📌 การใช้ Arrays Utility ใน Java
-ความยาก: 💀
+** 📌 การใช้ Arrays Utility ใน Java 💀
 #+begin_src java
 import java.util.Arrays;
 
