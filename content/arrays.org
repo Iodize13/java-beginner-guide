@@ -4,6 +4,8 @@
 * 📚 สรุปเนื้อหาเรื่อง Arrays (พร้อมตัวอย่างโค้ด)
 ความยาก: 💀💀💀💀
 
+[[./assets/java-cheatsheet.pdf][*Download Cheat sheets*]]
+
 *เนื้อหาต่อจากนี้ถูกสร้างขึ้นโดย AI โดยใช้ข้อมูลจาก Presentation Slides เรื่อง Arrays*
 
 --------------

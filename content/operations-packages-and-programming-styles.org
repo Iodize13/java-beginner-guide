@@ -1,5 +1,7 @@
 * [[./index.org][*Java*]]
 * 📚 สรุปเนื้อหาเรื่อง Operations, Packages, and Programming Styles (พร้อมตัวอย่างโค้ด)
+[[./assets/java-cheatsheet.pdf][*Download Cheat sheets*]]
+
 *เนื้อหาต่อจากนี้ถูกสร้างขึ้นโดย AI โดยใช้ข้อมูลจาก Presentation Slides เรื่อง Operations, Packages, and Programming Styles*
 
 --------------
