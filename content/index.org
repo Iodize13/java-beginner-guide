@@ -1,5 +1,6 @@
 * [[./index.org][*Java*]]
 * 📚 Java ก่อนกลางภาค
+[[./assets/java-cheatsheet.pdf][*Download Cheat sheets*]]
 ** [[./variable-and-datatypes.org][📌 Variable and Data Types]]
 ความยาก: 💀💀
 ** [[./operations-packages-and-programming-styles.org][📌 Operations, Packages and Programming Styles]]
