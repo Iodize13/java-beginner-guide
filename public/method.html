@@ -23,37 +23,42 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orga1fa922"><b>Java</b></a></li>
-<li><a href="#org0a202ed">📚 สรุปเนื้อหาเรื่อง Methods (พร้อมตัวอย่างโค้ด) 💀💀</a>
+<li><a href="#org76cc173"><b>Java</b></a></li>
+<li><a href="#org8711e98">📚 สรุปเนื้อหาเรื่อง Methods (พร้อมตัวอย่างโค้ด)</a>
 <ul>
-<li><a href="#orgaec8fba">📌 ตัวอย่างโครงสร้าง Method พื้นฐาน</a></li>
-<li><a href="#orgeb80206">📌 ตัวอย่างการประกาศและนิยาม Method</a></li>
-<li><a href="#orgc32db63">📌 การเรียกใช้งาน Method (Method Call)</a></li>
-<li><a href="#orgeffede0">📌 การส่งค่าพารามิเตอร์ (Passing Parameters)</a></li>
-<li><a href="#orgde5aade">📌 การ Overloading Method 💀💀</a></li>
-<li><a href="#org59b7688">📌 Method ที่เรียกตัวเอง (Recursive Method) 💀💀💀</a></li>
-<li><a href="#org20b6abf">📌 การใช้งาน Method จากแพ็กเกจมาตรฐาน (API) 💀</a></li>
+<li><a href="#orgd76c182">📌 ตัวอย่างโครงสร้าง Method พื้นฐาน</a></li>
+<li><a href="#orgca9d665">📌 ตัวอย่างการประกาศและนิยาม Method</a></li>
+<li><a href="#org42792cb">📌 การเรียกใช้งาน Method (Method Call)</a></li>
+<li><a href="#org663c2d1">📌 การส่งค่าพารามิเตอร์ (Passing Parameters)</a></li>
+<li><a href="#orge039844">📌 การ Overloading Method</a></li>
+<li><a href="#orgaa736fb">📌 Method ที่เรียกตัวเอง (Recursive Method)</a>
+<ul>
+<li><a href="#org41f9df3">📌 Recursive Method Stopping Condition</a></li>
+</ul>
+</li>
+<li><a href="#org76cff50">📌 การใช้งาน Method จากแพ็กเกจมาตรฐาน (API)</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orga1fa922" class="outline-2">
-<h2 id="orga1fa922"><a href="./index.html"><b>Java</b></a></h2>
+<div id="outline-container-org76cc173" class="outline-2">
+<h2 id="org76cc173"><a href="./index.html"><b>Java</b></a></h2>
 </div>
-<div id="outline-container-org0a202ed" class="outline-2">
-<h2 id="org0a202ed">📚 สรุปเนื้อหาเรื่อง Methods (พร้อมตัวอย่างโค้ด) 💀💀</h2>
-<div class="outline-text-2" id="text-org0a202ed">
+<div id="outline-container-org8711e98" class="outline-2">
+<h2 id="org8711e98">📚 สรุปเนื้อหาเรื่อง Methods (พร้อมตัวอย่างโค้ด)</h2>
+<div class="outline-text-2" id="text-org8711e98">
 <p>
+ความยาก: 💀💀
 <b>เนื้อหาต่อจากนี้ถูกสร้างขึ้นโดย AI โดยใช้ข้อมูลจาก Presentation Slides เรื่อง Methods</b>
 </p>
 
 <hr />
 </div>
 
-<div id="outline-container-orgaec8fba" class="outline-3">
-<h3 id="orgaec8fba">📌 ตัวอย่างโครงสร้าง Method พื้นฐาน</h3>
-<div class="outline-text-3" id="text-orgaec8fba">
+<div id="outline-container-orgd76c182" class="outline-3">
+<h3 id="orgd76c182">📌 ตัวอย่างโครงสร้าง Method พื้นฐาน</h3>
+<div class="outline-text-3" id="text-orgd76c182">
 <div class="org-src-container">
 <pre class="src src-java"><span class="org-keyword">public</span> <span class="org-keyword">class</span> <span class="org-type">MethodsExample</span> {
     <span class="org-comment-delimiter">// </span><span class="org-comment">Method &#3594;&#3639;&#3656;&#3629; add &#3619;&#3633;&#3610;&#3614;&#3634;&#3619;&#3634;&#3617;&#3636;&#3648;&#3605;&#3629;&#3619;&#3660;&#3626;&#3629;&#3591;&#3605;&#3633;&#3623;&#3649;&#3621;&#3632;&#3588;&#3639;&#3609;&#3588;&#3656;&#3634;&#3612;&#3621;&#3619;&#3623;&#3617;</span>
@@ -73,9 +78,9 @@
 </div>
 </div>
 
-<div id="outline-container-orgeb80206" class="outline-3">
-<h3 id="orgeb80206">📌 ตัวอย่างการประกาศและนิยาม Method</h3>
-<div class="outline-text-3" id="text-orgeb80206">
+<div id="outline-container-orgca9d665" class="outline-3">
+<h3 id="orgca9d665">📌 ตัวอย่างการประกาศและนิยาม Method</h3>
+<div class="outline-text-3" id="text-orgca9d665">
 <div class="org-src-container">
 <pre class="src src-java"><span class="org-comment-delimiter">// </span><span class="org-comment">&#3585;&#3634;&#3619;&#3611;&#3619;&#3632;&#3585;&#3634;&#3624; Method</span>
 <span class="org-keyword">static</span> <span class="org-type">int</span> <span class="org-function-name">max</span>(<span class="org-type">int</span> <span class="org-variable-name">num1</span>, <span class="org-type">int</span> <span class="org-variable-name">num2</span>);
@@ -95,9 +100,9 @@
 </div>
 </div>
 
-<div id="outline-container-orgc32db63" class="outline-3">
-<h3 id="orgc32db63">📌 การเรียกใช้งาน Method (Method Call)</h3>
-<div class="outline-text-3" id="text-orgc32db63">
+<div id="outline-container-org42792cb" class="outline-3">
+<h3 id="org42792cb">📌 การเรียกใช้งาน Method (Method Call)</h3>
+<div class="outline-text-3" id="text-org42792cb">
 <div class="org-src-container">
 <pre class="src src-java"><span class="org-keyword">public</span> <span class="org-keyword">static</span> <span class="org-type">void</span> <span class="org-function-name">main</span>(<span class="org-type">String</span>[] <span class="org-variable-name">args</span>) {
     <span class="org-type">int</span> <span class="org-variable-name">i</span> = 5;
@@ -112,9 +117,9 @@
 </div>
 </div>
 
-<div id="outline-container-orgeffede0" class="outline-3">
-<h3 id="orgeffede0">📌 การส่งค่าพารามิเตอร์ (Passing Parameters)</h3>
-<div class="outline-text-3" id="text-orgeffede0">
+<div id="outline-container-org663c2d1" class="outline-3">
+<h3 id="org663c2d1">📌 การส่งค่าพารามิเตอร์ (Passing Parameters)</h3>
+<div class="outline-text-3" id="text-org663c2d1">
 <div class="org-src-container">
 <pre class="src src-java"><span class="org-comment-delimiter">// </span><span class="org-comment">Method &#3626;&#3621;&#3633;&#3610;&#3588;&#3656;&#3634;&#3605;&#3633;&#3623;&#3649;&#3611;&#3619;&#3626;&#3629;&#3591;&#3605;&#3633;&#3623;</span>
 <span class="org-keyword">static</span> <span class="org-type">void</span> <span class="org-function-name">swap</span>(<span class="org-type">int</span> <span class="org-variable-name">a</span>, <span class="org-type">int</span> <span class="org-variable-name">b</span>) {
@@ -138,9 +143,12 @@
 </div>
 </div>
 
-<div id="outline-container-orgde5aade" class="outline-3">
-<h3 id="orgde5aade">📌 การ Overloading Method 💀💀</h3>
-<div class="outline-text-3" id="text-orgde5aade">
+<div id="outline-container-orge039844" class="outline-3">
+<h3 id="orge039844">📌 การ Overloading Method</h3>
+<div class="outline-text-3" id="text-orge039844">
+<p>
+ความยาก: 💀💀
+</p>
 <div class="org-src-container">
 <pre class="src src-java"><span class="org-comment-delimiter">// </span><span class="org-comment">&#3585;&#3634;&#3619; Overloading Method &#3604;&#3657;&#3623;&#3618;&#3594;&#3639;&#3656;&#3629;&#3648;&#3604;&#3637;&#3618;&#3623;&#3585;&#3633;&#3609;&#3649;&#3605;&#3656;&#3605;&#3656;&#3634;&#3591;&#3585;&#3633;&#3609;&#3607;&#3637;&#3656;&#3594;&#3609;&#3636;&#3604;&#3614;&#3634;&#3619;&#3634;&#3617;&#3636;&#3648;&#3605;&#3629;&#3619;&#3660;</span>
 <span class="org-keyword">static</span> <span class="org-type">int</span> <span class="org-function-name">max</span>(<span class="org-type">int</span> <span class="org-variable-name">num1</span>, <span class="org-type">int</span> <span class="org-variable-name">num2</span>) {
@@ -162,13 +170,16 @@
 </div>
 </div>
 
-<div id="outline-container-org59b7688" class="outline-3">
-<h3 id="org59b7688">📌 Method ที่เรียกตัวเอง (Recursive Method) 💀💀💀</h3>
-<div class="outline-text-3" id="text-org59b7688">
+<div id="outline-container-orgaa736fb" class="outline-3">
+<h3 id="orgaa736fb">📌 Method ที่เรียกตัวเอง (Recursive Method)</h3>
+<div class="outline-text-3" id="text-orgaa736fb">
+<p>
+ความยาก: 💀💀💀
+</p>
 <div class="org-src-container">
 <pre class="src src-java"><span class="org-comment-delimiter">// </span><span class="org-comment">&#3585;&#3634;&#3619;&#3588;&#3635;&#3609;&#3623;&#3603; Factorial &#3604;&#3657;&#3623;&#3618;&#3585;&#3634;&#3619;&#3651;&#3594;&#3657; Recursive Method</span>
 <span class="org-keyword">static</span> <span class="org-type">long</span> <span class="org-function-name">factorial</span>(<span class="org-type">int</span> <span class="org-variable-name">n</span>) {
-    <span class="org-keyword">if</span> (n == 0) {
+    <span class="org-keyword">if</span> (n == 0) { <span class="org-comment-delimiter">// </span><span class="org-comment">&#3648;&#3591;&#3639;&#3656;&#3629;&#3609;&#3652;&#3586;&#3627;&#3618;&#3640;&#3604;</span>
         <span class="org-keyword">return</span> 1;
     } <span class="org-keyword">else</span> {
         <span class="org-keyword">return</span> n * factorial(n - 1);
@@ -181,14 +192,25 @@
 }
 </pre>
 </div>
+</div>
+<div id="outline-container-org41f9df3" class="outline-4">
+<h4 id="org41f9df3">📌 Recursive Method Stopping Condition</h4>
+<div class="outline-text-4" id="text-org41f9df3">
+<p>
+ถ้า Recursive Method ไม่มีเงื่อนไขหยุด จะทำให้เกิด <b>StackOverflowError</b>
+</p>
 
 <hr />
 </div>
 </div>
+</div>
 
-<div id="outline-container-org20b6abf" class="outline-3">
-<h3 id="org20b6abf">📌 การใช้งาน Method จากแพ็กเกจมาตรฐาน (API) 💀</h3>
-<div class="outline-text-3" id="text-org20b6abf">
+<div id="outline-container-org76cff50" class="outline-3">
+<h3 id="org76cff50">📌 การใช้งาน Method จากแพ็กเกจมาตรฐาน (API)</h3>
+<div class="outline-text-3" id="text-org76cff50">
+<p>
+ความยาก: 💀
+</p>
 <div class="org-src-container">
 <pre class="src src-java"><span class="org-keyword">import</span> <span class="org-constant">java</span>.<span class="org-constant">util</span>.<span class="org-type">Scanner</span>;
 

@@ -1,5 +1,6 @@
 * [[./index.org][*Java*]]
-* 📚 สรุปเนื้อหาเรื่อง Methods (พร้อมตัวอย่างโค้ด) 💀💀
+* 📚 สรุปเนื้อหาเรื่อง Methods (พร้อมตัวอย่างโค้ด)
+ความยาก: 💀💀
 *เนื้อหาต่อจากนี้ถูกสร้างขึ้นโดย AI โดยใช้ข้อมูลจาก Presentation Slides เรื่อง Methods*
 
 --------------
@@ -71,7 +72,8 @@ public static void main(String[] args) {
 
 --------------
 
-** 📌 การ Overloading Method 💀💀
+** 📌 การ Overloading Method
+ความยาก: 💀💀
 #+begin_src java
 // การ Overloading Method ด้วยชื่อเดียวกันแต่ต่างกันที่ชนิดพารามิเตอร์
 static int max(int num1, int num2) {
@@ -90,11 +92,12 @@ public static void main(String[] args) {
 
 --------------
 
-** 📌 Method ที่เรียกตัวเอง (Recursive Method) 💀💀💀
+** 📌 Method ที่เรียกตัวเอง (Recursive Method)
+ความยาก: 💀💀💀
 #+begin_src java
 // การคำนวณ Factorial ด้วยการใช้ Recursive Method
 static long factorial(int n) {
-    if (n == 0) {
+    if (n == 0) { // เงื่อนไขหยุด
         return 1;
     } else {
         return n * factorial(n - 1);
@@ -106,10 +109,13 @@ public static void main(String[] args) {
     System.out.println("Factorial of " + number + " is " + factorial(number));  // ผลลัพธ์: 120
 }
 #+end_src
+*** 📌 Recursive Method Stopping Condition
+ถ้า Recursive Method ไม่มีเงื่อนไขหยุด จะทำให้เกิด *StackOverflowError*
 
 --------------
 
-** 📌 การใช้งาน Method จากแพ็กเกจมาตรฐาน (API) 💀
+** 📌 การใช้งาน Method จากแพ็กเกจมาตรฐาน (API)
+ความยาก: 💀
 #+begin_src java
 import java.util.Scanner;
 

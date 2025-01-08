@@ -1,5 +1,8 @@
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [letterpaper]
 * [[./index.org][*Java*]]
-* 📚 สรุปเนื้อหาเรื่อง Arrays (พร้อมตัวอย่างโค้ด) 💀💀💀💀
+* 📚 สรุปเนื้อหาเรื่อง Arrays (พร้อมตัวอย่างโค้ด)
+ความยาก: 💀💀💀💀
 *เนื้อหาต่อจากนี้ถูกสร้างขึ้นโดย AI โดยใช้ข้อมูลจาก Presentation Slides เรื่อง Arrays*
 
 --------------
@@ -37,7 +40,37 @@ for (int num : list) {
 
 --------------
 
-** 📌 Multi-dimensional Arrays (Array หลายมิติ) 💀
+** 📌 Frequents Errors About Array
+ความยาก: 💀💀💀
+หากพยายามเข้าถึง index ที่ไม่มีใน array จะเกิดข้อผิดพลาด
+=ArrayIndexOutOfBoundsException=
+
+#+begin_src java
+int[] list = {1, 2, 3};
+System.out.println(list[3]);  // จะเกิด ArrayIndexOutOfBoundsException
+#+end_src
+
+--------------
+
+** 📌 Property =length= ใน Array หลายมิติ
+- =A.length= ให้จำนวนแถวของ array
+- =A[0].length= ให้จำนวนคอลัมน์ในแถวแรก
+
+#+begin_src java
+int[][] A = {
+    {1, 2, 3, 4},
+    {5, 6, 7, 8},
+    {9, 10, 11, 12}
+};
+
+System.out.println("Number of rows: " + A.length);        // ผลลัพธ์: 3
+System.out.println("Number of columns in row 0: " + A[0].length);  // ผลลัพธ์: 4
+#+end_src
+
+--------------
+
+** 📌 Multi-dimensional Arrays (Array หลายมิติ)
+ความยาก: 💀
 #+begin_src java
 // สร้าง 2D Array (3 แถว 4 คอลัมน์)
 int[][] matrix = {
@@ -57,7 +90,8 @@ for (int i = 0; i < matrix.length; i++) {
 
 --------------
 
-** 📌 การค้นหาค่าใน Array (Linear Search) 💀
+** 📌 การค้นหาค่าใน Array (Linear Search)
+ความยาก: 💀
 #+begin_src java
 public class LinearSearch {
     public static int search(int[] array, int target) {
@@ -79,7 +113,8 @@ public class LinearSearch {
 
 --------------
 
-** 📌 การคัดลอกค่าใน Array (Array Copy) 💀
+** 📌 การคัดลอกค่าใน Array (Array Copy)
+ความยาก: 💀
 - 📋 *วิธีที่ 1: การคัดลอกแบบ Manual*
 #+begin_src java
 int[] source = {1, 2, 3, 4, 5};
@@ -96,7 +131,8 @@ for (int num : destination) {
 }
 #+end_src
 
-- 📋 *วิธีที่ 2: การคัดลอกด้วย System.arraycopy()* 💀
+- 📋 *วิธีที่ 2: การคัดลอกด้วย System.arraycopy()*
+ความยาก: 💀
 #+begin_src java
 int[] source = {1, 2, 3, 4, 5};
 int[] destination = new int[source.length];
@@ -112,8 +148,37 @@ for (int num : destination) {
 
 --------------
 
-** 📌 การเรียงลำดับค่าใน Array (Sorting) 💀💀💀💀
-- 📋 *การเรียงลำดับด้วย Insertion Sort* 💀💀💀💀
+** 📌 การเรียงลำดับค่าใน Array (Sorting)
+ความยาก: 💀💀💀💀
+*** ✅ การเรียงลำดับค่าใน Array ด้วย Selection Sort
+ความยาก: 💀💀💀💀
+#+begin_src java
+public class SelectionSort {
+    public static void sort(int[] array) {
+        for (int i = 0; i < array.length - 1; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[j] < array[minIndex]) {
+                    minIndex = j;
+                }
+            }
+            int temp = array[minIndex];
+            array[minIndex] = array[i];
+            array[i] = temp;
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = {64, 25, 12, 22, 11};
+        sort(numbers);
+        for (int num : numbers) {
+            System.out.print(num + " ");  // ผลลัพธ์: 11 12 22 25 64
+        }
+    }
+}
+#+end_src
+*** ✅ *การเรียงลำดับด้วย Insertion Sort*
+ความยาก: 💀💀💀💀
 #+begin_src java
 public class InsertionSort {
     public static void sort(int[] array) {
@@ -142,7 +207,8 @@ public class InsertionSort {
 
 --------------
 
-** 📌 การค้นหาด้วย Binary Search (Binary Search) 💀💀💀
+** 📌 การค้นหาด้วย Binary Search (Binary Search)
+ความยาก: 💀💀💀
 #+begin_src java
 public class BinarySearch {
     public static int binarySearch(int[] array, int target) {
@@ -173,7 +239,8 @@ public class BinarySearch {
 
 --------------
 
-** 📌 การใช้ Arrays Utility ใน Java 💀
+** 📌 การใช้ Arrays Utility ใน Java
+ความยาก: 💀
 #+begin_src java
 import java.util.Arrays;
 
