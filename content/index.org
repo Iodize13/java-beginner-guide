@@ -1,6 +1,7 @@
 * [[./index.org][*Java*]]
 * 📚 Java ก่อนกลางภาค
-[[./assets/java-cheatsheet.pdf][*Download Cheat sheets*]]
+
+#+HTML: <a href="./assets/java-cheatsheet.pdf" class="download-btn" download>Download PDF 📄</a>
 ** [[./variable-and-datatypes.org][📌 Variable and Data Types]]
 ความยาก: 💀💀
 ** [[./operations-packages-and-programming-styles.org][📌 Operations, Packages and Programming Styles]]

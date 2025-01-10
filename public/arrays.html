@@ -23,48 +23,44 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org4573cd1"><b>Java</b></a></li>
-<li><a href="#org783532a">📚 สรุปเนื้อหาเรื่อง Arrays (พร้อมตัวอย่างโค้ด)</a>
+<li><a href="#orgd84e3ae"><b>Java</b></a></li>
+<li><a href="#org30d2172">📚 สรุปเนื้อหาเรื่อง Arrays (พร้อมตัวอย่างโค้ด)</a>
 <ul>
-<li><a href="#orgd58191a">📌 การสร้างและใช้งาน Array</a></li>
-<li><a href="#orgb13442f">📌 Array Initialization (การกำหนดค่าเริ่มต้น)</a></li>
-<li><a href="#org2d40b25">📌 Frequents Errors About Array 💀💀💀</a></li>
-<li><a href="#org499e492">📌 Property <code>length</code> ใน Array หลายมิติ</a></li>
-<li><a href="#org86b3599">📌 Multi-dimensional Arrays (Array หลายมิติ) 💀</a></li>
-<li><a href="#org424d2e5">📌 การค้นหาค่าใน Array (Linear Search) 💀</a></li>
-<li><a href="#org89c28f0">📌 การคัดลอกค่าใน Array (Array Copy) 💀</a></li>
-<li><a href="#org3d2e158">📌 การเรียงลำดับค่าใน Array (Sorting) 💀💀💀💀</a></li>
-<li><a href="#orgd08a867">📌 การค้นหาด้วย Binary Search (Binary Search) 💀💀💀</a></li>
-<li><a href="#orgcdf9045">📌 การใช้ Arrays Utility ใน Java 💀</a></li>
+<li><a href="#orgd4ffac5">📌 การสร้างและใช้งาน Array</a></li>
+<li><a href="#org0c4fec9">📌 Array Initialization (การกำหนดค่าเริ่มต้น)</a></li>
+<li><a href="#orgd110a82">📌 Frequents Errors About Array 💀💀💀</a></li>
+<li><a href="#org93efdd8">📌 Property <code>length</code> ใน Array หลายมิติ</a></li>
+<li><a href="#org767d394">📌 Multi-dimensional Arrays (Array หลายมิติ) 💀</a></li>
+<li><a href="#orgf0e4987">📌 การค้นหาค่าใน Array (Linear Search) 💀</a></li>
+<li><a href="#org7ac2667">📌 การคัดลอกค่าใน Array (Array Copy) 💀</a></li>
+<li><a href="#org1acc67e">📌 การเรียงลำดับค่าใน Array (Sorting) 💀💀💀💀</a></li>
+<li><a href="#org68150ec">📌 การค้นหาด้วย Binary Search (Binary Search) 💀💀💀</a></li>
+<li><a href="#orgbd984eb">📌 การใช้ Arrays Utility ใน Java 💀</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org4573cd1" class="outline-2">
-<h2 id="org4573cd1"><a href="./index.html"><b>Java</b></a></h2>
+<div id="outline-container-orgd84e3ae" class="outline-2">
+<h2 id="orgd84e3ae"><a href="./index.html"><b>Java</b></a></h2>
 </div>
-<div id="outline-container-org783532a" class="outline-2">
-<h2 id="org783532a">📚 สรุปเนื้อหาเรื่อง Arrays (พร้อมตัวอย่างโค้ด)</h2>
-<div class="outline-text-2" id="text-org783532a">
+<div id="outline-container-org30d2172" class="outline-2">
+<h2 id="org30d2172">📚 สรุปเนื้อหาเรื่อง Arrays (พร้อมตัวอย่างโค้ด)</h2>
+<div class="outline-text-2" id="text-org30d2172">
+<a href="./assets/java-cheatsheet.pdf" class="download-btn" download>Download PDF 📄</a>
 <p>
 ความยาก: 💀💀💀💀
 </p>
 
 <p>
-<a href="./assets/java-cheatsheet.pdf"><b>Download Cheat sheets</b></a>
-</p>
-
-<p>
 <b>เนื้อหาต่อจากนี้ถูกสร้างขึ้นโดย AI โดยใช้ข้อมูลจาก Presentation Slides เรื่อง Arrays</b>
 </p>
-
 <hr />
 </div>
 
-<div id="outline-container-orgd58191a" class="outline-3">
-<h3 id="orgd58191a">📌 การสร้างและใช้งาน Array</h3>
-<div class="outline-text-3" id="text-orgd58191a">
+<div id="outline-container-orgd4ffac5" class="outline-3">
+<h3 id="orgd4ffac5">📌 การสร้างและใช้งาน Array</h3>
+<div class="outline-text-3" id="text-orgd4ffac5">
 <div class="org-src-container">
 <pre class="src src-java"><span class="org-comment-delimiter">// </span><span class="org-comment">&#3626;&#3619;&#3657;&#3634;&#3591; Array &#3648;&#3585;&#3655;&#3610;&#3592;&#3635;&#3609;&#3623;&#3609;&#3648;&#3605;&#3655;&#3617; 5 &#3588;&#3656;&#3634;</span>
 <span class="org-type">int</span>[] <span class="org-variable-name">numbers</span> = <span class="org-keyword">new</span> <span class="org-type">int</span>[5];
@@ -87,9 +83,9 @@ numbers[4] = 50;
 </div>
 </div>
 
-<div id="outline-container-orgb13442f" class="outline-3">
-<h3 id="orgb13442f">📌 Array Initialization (การกำหนดค่าเริ่มต้น)</h3>
-<div class="outline-text-3" id="text-orgb13442f">
+<div id="outline-container-org0c4fec9" class="outline-3">
+<h3 id="org0c4fec9">📌 Array Initialization (การกำหนดค่าเริ่มต้น)</h3>
+<div class="outline-text-3" id="text-org0c4fec9">
 <div class="org-src-container">
 <pre class="src src-java"><span class="org-comment-delimiter">// </span><span class="org-comment">&#3626;&#3619;&#3657;&#3634;&#3591;&#3649;&#3621;&#3632;&#3585;&#3635;&#3627;&#3609;&#3604;&#3588;&#3656;&#3634;&#3648;&#3619;&#3636;&#3656;&#3617;&#3605;&#3657;&#3609;&#3651;&#3609; Array</span>
 <span class="org-type">int</span>[] <span class="org-variable-name">list</span> = {1, 2, 3, 4, 5};
@@ -105,9 +101,9 @@ numbers[4] = 50;
 </div>
 </div>
 
-<div id="outline-container-org2d40b25" class="outline-3">
-<h3 id="org2d40b25">📌 Frequents Errors About Array 💀💀💀</h3>
-<div class="outline-text-3" id="text-org2d40b25">
+<div id="outline-container-orgd110a82" class="outline-3">
+<h3 id="orgd110a82">📌 Frequents Errors About Array 💀💀💀</h3>
+<div class="outline-text-3" id="text-orgd110a82">
 <p>
 หากพยายามเข้าถึง index ที่ไม่มีใน array จะเกิดข้อผิดพลาด
 <code>ArrayIndexOutOfBoundsException</code>
@@ -123,9 +119,9 @@ System.out.println(list[3]);  <span class="org-comment-delimiter">// </span><spa
 </div>
 </div>
 
-<div id="outline-container-org499e492" class="outline-3">
-<h3 id="org499e492">📌 Property <code>length</code> ใน Array หลายมิติ</h3>
-<div class="outline-text-3" id="text-org499e492">
+<div id="outline-container-org93efdd8" class="outline-3">
+<h3 id="org93efdd8">📌 Property <code>length</code> ใน Array หลายมิติ</h3>
+<div class="outline-text-3" id="text-org93efdd8">
 <ul class="org-ul">
 <li><code>A.length</code> ให้จำนวนแถวของ array</li>
 <li><code>A[0].length</code> ให้จำนวนคอลัมน์ในแถวแรก</li>
@@ -147,9 +143,9 @@ System.out.println(<span class="org-string">"Number of columns in row 0: "</span
 </div>
 </div>
 
-<div id="outline-container-org86b3599" class="outline-3">
-<h3 id="org86b3599">📌 Multi-dimensional Arrays (Array หลายมิติ) 💀</h3>
-<div class="outline-text-3" id="text-org86b3599">
+<div id="outline-container-org767d394" class="outline-3">
+<h3 id="org767d394">📌 Multi-dimensional Arrays (Array หลายมิติ) 💀</h3>
+<div class="outline-text-3" id="text-org767d394">
 <div class="org-src-container">
 <pre class="src src-java"><span class="org-comment-delimiter">// </span><span class="org-comment">&#3626;&#3619;&#3657;&#3634;&#3591; 2D Array (3 &#3649;&#3606;&#3623; 4 &#3588;&#3629;&#3621;&#3633;&#3617;&#3609;&#3660;)</span>
 <span class="org-type">int</span>[][] <span class="org-variable-name">matrix</span> = {
@@ -172,9 +168,9 @@ System.out.println(<span class="org-string">"Number of columns in row 0: "</span
 </div>
 </div>
 
-<div id="outline-container-org424d2e5" class="outline-3">
-<h3 id="org424d2e5">📌 การค้นหาค่าใน Array (Linear Search) 💀</h3>
-<div class="outline-text-3" id="text-org424d2e5">
+<div id="outline-container-orgf0e4987" class="outline-3">
+<h3 id="orgf0e4987">📌 การค้นหาค่าใน Array (Linear Search) 💀</h3>
+<div class="outline-text-3" id="text-orgf0e4987">
 <div class="org-src-container">
 <pre class="src src-java"><span class="org-keyword">public</span> <span class="org-keyword">class</span> <span class="org-type">LinearSearch</span> {
     <span class="org-keyword">public</span> <span class="org-keyword">static</span> <span class="org-type">int</span> <span class="org-function-name">search</span>(<span class="org-type">int</span>[] <span class="org-variable-name">array</span>, <span class="org-type">int</span> <span class="org-variable-name">target</span>) {
@@ -199,9 +195,9 @@ System.out.println(<span class="org-string">"Number of columns in row 0: "</span
 </div>
 </div>
 
-<div id="outline-container-org89c28f0" class="outline-3">
-<h3 id="org89c28f0">📌 การคัดลอกค่าใน Array (Array Copy) 💀</h3>
-<div class="outline-text-3" id="text-org89c28f0">
+<div id="outline-container-org7ac2667" class="outline-3">
+<h3 id="org7ac2667">📌 การคัดลอกค่าใน Array (Array Copy) 💀</h3>
+<div class="outline-text-3" id="text-org7ac2667">
 <ul class="org-ul">
 <li>📋 <b>วิธีที่ 1: การคัดลอกแบบ Manual</b></li>
 </ul>
@@ -245,9 +241,9 @@ System.arraycopy(source, 0, destination, 0, source.length);
 </div>
 </div>
 
-<div id="outline-container-org3d2e158" class="outline-3">
-<h3 id="org3d2e158">📌 การเรียงลำดับค่าใน Array (Sorting) 💀💀💀💀</h3>
-<div class="outline-text-3" id="text-org3d2e158">
+<div id="outline-container-org1acc67e" class="outline-3">
+<h3 id="org1acc67e">📌 การเรียงลำดับค่าใน Array (Sorting) 💀💀💀💀</h3>
+<div class="outline-text-3" id="text-org1acc67e">
 <ul class="org-ul">
 <li>✅ การเรียงลำดับค่าใน Array ด้วย Selection Sort</li>
 </ul>
@@ -317,9 +313,9 @@ System.arraycopy(source, 0, destination, 0, source.length);
 </div>
 </div>
 
-<div id="outline-container-orgd08a867" class="outline-3">
-<h3 id="orgd08a867">📌 การค้นหาด้วย Binary Search (Binary Search) 💀💀💀</h3>
-<div class="outline-text-3" id="text-orgd08a867">
+<div id="outline-container-org68150ec" class="outline-3">
+<h3 id="org68150ec">📌 การค้นหาด้วย Binary Search (Binary Search) 💀💀💀</h3>
+<div class="outline-text-3" id="text-org68150ec">
 <div class="org-src-container">
 <pre class="src src-java"><span class="org-keyword">public</span> <span class="org-keyword">class</span> <span class="org-type">BinarySearch</span> {
     <span class="org-keyword">public</span> <span class="org-keyword">static</span> <span class="org-type">int</span> <span class="org-function-name">binarySearch</span>(<span class="org-type">int</span>[] <span class="org-variable-name">array</span>, <span class="org-type">int</span> <span class="org-variable-name">target</span>) {
@@ -353,9 +349,9 @@ System.arraycopy(source, 0, destination, 0, source.length);
 </div>
 </div>
 
-<div id="outline-container-orgcdf9045" class="outline-3">
-<h3 id="orgcdf9045">📌 การใช้ Arrays Utility ใน Java 💀</h3>
-<div class="outline-text-3" id="text-orgcdf9045">
+<div id="outline-container-orgbd984eb" class="outline-3">
+<h3 id="orgbd984eb">📌 การใช้ Arrays Utility ใน Java 💀</h3>
+<div class="outline-text-3" id="text-orgbd984eb">
 <div class="org-src-container">
 <pre class="src src-java"><span class="org-keyword">import</span> <span class="org-constant">java</span>.<span class="org-constant">util</span>.<span class="org-type">Arrays</span>;
 
